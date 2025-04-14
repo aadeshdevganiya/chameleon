@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+
+/* styles.css or globals.css */
+@font-face {
+  font-family: "DM-Sans";
+  src: url(../src/font/DMSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: "DM-Sans-semibold";
+  src: url(../src/font/DMSans-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "DM-Sans-bold";
+  src: url(../src/font/DMSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Anton";
+  src: url(../src/font/Anton-Regular.ttf);
+}
+
+
+.font-sans {
+  font-family: "DM-Sans";
+}
+
+.font-sans-semibold {
+  font-family: "DM-Sans-semibold";
+}
+
+.font-sans-bold {
+  font-family: "DM-Sans-bold";
+}
+
+.Anton {
+  font-family: "Anton";
+}
+
+.backdrop-blur-box {
+  background-color: rgb(255 255 255 / 54%);
+  backdrop-filter: blur(6px);
+}
+
+
+@layer utilities {
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .animate-slide {
+    animation: slide 30s linear infinite;
+  }
+}
+
+
+.background-text {
+  position: sticky;
+  top: 0;
+  z-index: -1;
+}
+@media (max-width: 400px) {
+   .blog-overlay{
+    font-size: 12px;
+    max-height: 360px;
+    rotate: -2deg;
+    border-radius: 10px;
+   }
+}
+
+
+
