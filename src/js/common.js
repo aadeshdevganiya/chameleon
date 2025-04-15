@@ -93,6 +93,29 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".counter");
+
+    counters.forEach(counter => {
+        // Check if it should end with '+'
+        const hasPlus = counter.getAttribute("data-plus") === "true";
+        const target = +counter.getAttribute("data-target");
+
+        gsap.fromTo(counter,
+            { innerText: 0 },
+            {
+                innerText: target,
+                duration: 2,
+                ease: "power1.out",
+                snap: { innerText: 1 },
+                onUpdate: function () {
+                    counter.innerText = Math.floor(counter.innerText) + (hasPlus ? "+" : "");
+                }
+            }
+        );
+    });
+});
+
 // auto-slider
 const images = document.querySelectorAll('.slider-img');
 gsap.set(images, { opacity: 0.3, transition: 'opacity 0.3s ease' });
@@ -203,7 +226,7 @@ mm.add("(max-width: 767px)", () => {
         gsap.from(item, {
             x: direction * 100,
             opacity: 0,
-            rotation: 10, 
+            rotation: 10,
             duration: 1.5,
             ease: "power2.out",
             scrollTrigger: {
@@ -229,26 +252,26 @@ const projectTitle = document.getElementById("projectTitle");
 const projectTags = document.getElementById("projectTags");
 
 const projectData = [
-  {
-    title: "Signaturia",
-    image: "images/everprint.png",
-    features: ["Design", "Web App", "Signature Generator"]
-  },
-  {
-    title: "Ticket Booking",
-    image: "images/ticket.png",
-    features: ["UI/UX", "Booking", "React"]
-  },
-  {
-    title: "Jewelry Design",
-    image: "images/jewelry.png",
-    features: ["3D Renders", "Branding", "Luxury"]
-  },
-  {
-    title: "Office Management",
-    image: "images/office.png",
-    features: ["Dashboard", "HR Tools", "Productivity"]
-  }
+    {
+        title: "Signaturia",
+        image: "images/everprint.png",
+        features: ["Design", "Web App", "Signature Generator"]
+    },
+    {
+        title: "Ticket Booking",
+        image: "images/ticket.png",
+        features: ["UI/UX", "Booking", "React"]
+    },
+    {
+        title: "Jewelry Design",
+        image: "images/jewelry.png",
+        features: ["3D Renders", "Branding", "Luxury"]
+    },
+    {
+        title: "Office Management",
+        image: "images/office.png",
+        features: ["Dashboard", "HR Tools", "Productivity"]
+    }
 ];
 
 let currentIndex = 0;
@@ -263,86 +286,86 @@ gsap.set(firstDesc, { opacity: 1, marginTop: "1rem" });
 
 const firstArrow = firstItem.querySelector(".project-arrow");
 if (firstArrow) {
-  firstArrow.style.display = "inline-block";
-  gsap.set(firstArrow, { opacity: 1 });
+    firstArrow.style.display = "inline-block";
+    gsap.set(firstArrow, { opacity: 1 });
 }
 
 updateProject(0);
 
 function updateProject(index) {
-  const currentData = projectData[index];
+    const currentData = projectData[index];
 
-  projectImg.src = currentData.image;
-  projectImg.alt = currentData.title;
-  projectTitle.textContent = currentData.title;
+    projectImg.src = currentData.image;
+    projectImg.alt = currentData.title;
+    projectTitle.textContent = currentData.title;
 
-  projectTags.innerHTML = "";
-  currentData.features.forEach((tag) => {
-    const li = document.createElement("li");
-    li.className = "px-[16px] py-[4px] border-1 border-black rounded-full";
-    li.textContent = tag;
-    projectTags.appendChild(li);
-  });
+    projectTags.innerHTML = "";
+    currentData.features.forEach((tag) => {
+        const li = document.createElement("li");
+        li.className = "px-[16px] py-[4px] border-1 border-black rounded-full";
+        li.textContent = tag;
+        projectTags.appendChild(li);
+    });
 }
 
 gsap.to({}, {
-  scrollTrigger: {
-    trigger: section,
-    start: "top top",
-    end: `+=${(projectItems.length - 1) * window.innerHeight}`,
-    scrub: 0.3,
-    pin: true,
-    onUpdate: (self) => {
-      const newIndex = Math.round(self.progress * (projectItems.length - 1));
-      if (currentIndex !== newIndex) {
-        const prev = projectItems[currentIndex];
-        gsap.to(prev.querySelector(".project-title"), { opacity: 0.3 });
-        gsap.to(prev.querySelector(".project-description"), {
-          height: 0,
-          opacity: 0,
-          marginTop: 0,
-          overflow: "hidden",
-          duration: 0.4,
-          ease: "power2.inOut"
-        });
+    scrollTrigger: {
+        trigger: section,
+        start: "top top",
+        end: `+=${(projectItems.length - 1) * window.innerHeight}`,
+        scrub: 0.3,
+        pin: true,
+        onUpdate: (self) => {
+            const newIndex = Math.round(self.progress * (projectItems.length - 1));
+            if (currentIndex !== newIndex) {
+                const prev = projectItems[currentIndex];
+                gsap.to(prev.querySelector(".project-title"), { opacity: 0.3 });
+                gsap.to(prev.querySelector(".project-description"), {
+                    height: 0,
+                    opacity: 0,
+                    marginTop: 0,
+                    overflow: "hidden",
+                    duration: 0.4,
+                    ease: "power2.inOut"
+                });
 
-        const next = projectItems[newIndex];
-        gsap.to(next.querySelector(".project-title"), { opacity: 1 });
+                const next = projectItems[newIndex];
+                gsap.to(next.querySelector(".project-title"), { opacity: 1 });
 
-        const desc = next.querySelector(".project-description");
-        desc.style.display = "block";
-        const fullHeight = desc.scrollHeight;
+                const desc = next.querySelector(".project-description");
+                desc.style.display = "block";
+                const fullHeight = desc.scrollHeight;
 
-        gsap.fromTo(desc, {
-          height: 0,
-          opacity: 0,
-          marginTop: 0,
-        }, {
-          height: fullHeight,
-          opacity: 1,
-          marginTop: "1rem",
-          duration: 0.5,
-          ease: "power2.inOut",
-          onComplete: () => {
-            desc.style.height = "auto";
-          }
-        });
+                gsap.fromTo(desc, {
+                    height: 0,
+                    opacity: 0,
+                    marginTop: 0,
+                }, {
+                    height: fullHeight,
+                    opacity: 1,
+                    marginTop: "1rem",
+                    duration: 0.5,
+                    ease: "power2.inOut",
+                    onComplete: () => {
+                        desc.style.height = "auto";
+                    }
+                });
 
-        document.querySelectorAll(".project-arrow").forEach((arrow) => {
-          gsap.to(arrow, { opacity: 0, duration: 0.3 });
-        });
+                document.querySelectorAll(".project-arrow").forEach((arrow) => {
+                    gsap.to(arrow, { opacity: 0, duration: 0.3 });
+                });
 
-        const activeArrow = next.querySelector(".project-arrow");
-        if (activeArrow) {
-          activeArrow.style.display = 'inline-block';
-          gsap.to(activeArrow, { opacity: 1, duration: 0.3 });
+                const activeArrow = next.querySelector(".project-arrow");
+                if (activeArrow) {
+                    activeArrow.style.display = 'inline-block';
+                    gsap.to(activeArrow, { opacity: 1, duration: 0.3 });
+                }
+
+                currentIndex = newIndex;
+                updateProject(currentIndex);
+            }
         }
-
-        currentIndex = newIndex;
-        updateProject(currentIndex);
-      }
     }
-  }
 });
 
 
@@ -399,17 +422,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     gsap.to(spans, {
-        opacity: 1,               
-        y: 0,                      
-        stagger: 0.15,             
-        duration: 1.4,             
-        ease: "power3.out",        
+        opacity: 1,
+        y: 0,
+        stagger: 0.15,
+        duration: 1.4,
+        ease: "power3.out",
         scrollTrigger: {
             trigger: '.animate-text-wrapper',
-            start: 'top 80%',      
-            end: 'bottom 15%',     
-            scrub: 2,            
-            markers: false         
+            start: 'top 80%',
+            end: 'bottom 15%',
+            scrub: 2,
+            markers: false
         }
     });
 });
@@ -418,22 +441,22 @@ document.addEventListener("DOMContentLoaded", () => {
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.utils.toArray(".feedback-card").forEach((card, index) => {
-  gsap.from(card, {
-    y: 60,  
-    scale: 0.8, 
-    rotateZ: index % 2 === 0 ? 8 : 8, 
-    opacity: 0.5,
-    duration: 1.2,
-    ease: "power3.out",  
-    scrollTrigger: {
-      trigger: card,
-      start: "top 85%",  
-      end: "bottom 30%",  
-      toggleActions: "play none none reverse", 
-      scrub: true,  
-      once: false,  
-    },
-  });
+    gsap.from(card, {
+        y: 60,
+        scale: 0.8,
+        rotateZ: index % 2 === 0 ? 8 : 8,
+        opacity: 0.5,
+        duration: 1.2,
+        ease: "power3.out",
+        scrollTrigger: {
+            trigger: card,
+            start: "top 85%",
+            end: "bottom 30%",
+            toggleActions: "play none none reverse",
+            scrub: true,
+            once: false,
+        },
+    });
 });
 
 

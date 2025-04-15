@@ -1,0 +1,752 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chameleon Infotech</title>
+        <link href="./output.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="images/chameleonlogo.png">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    </head>
+    <body class="font-sans overflow-x-hidden scroll-smooth">
+
+        <header class="sticky top-[20px] z-50 mb-[-100px]">
+            <div class="container mx-auto px-[15px] lg:px-[0px]">
+                <div
+                    class="flex justify-between items-center bg-white text-black max-h-[78px] mt-[20px] mx-auto rounded-full px-[28px] py-[10px]"
+                    id="header">
+                    <div class="logo" id="logo">
+                        <a href="index.html"><img
+                                src="../src/images/logo.png"
+                                alt
+                                class="max-w-[130px] md:max-w-[188px]"></a>
+                    </div>
+                    <div
+                        class="burgerMenu lg:hidden w-6 h-6 cursor-pointer bg-transparent duration-300 ease-in-out relative z-[51]"
+                        id="burgerMenu">
+                        <span
+                            class="absolute block w-full h-[2px] bg-black rounded-[2px] duration-150 ease-in-out origin-[left-center] top-0"></span>
+                        <span
+                            class="absolute block w-full h-[2px] bg-black rounded-[2px] duration-150 ease-in-out origin-[left-center] top-2"></span>
+                        <span
+                            class="absolute block w-full h-[2px] bg-black rounded-[2px] duration-150 ease-in-out origin-[left-center] top-4"></span>
+                    </div>
+                    <nav
+                        class="lg:block fixed lg:static h-screen lg:h-full bottom-0 top-0 right-0 w-full sm:w-1/2 bg-white bg-opacity-95 px-7 pt-20 z-50 lg:pt-0 lg:px-0 lg:bg-transparent lg:w-auto backdrop-blur-[10px] lg:backdrop-blur-0 hidden"
+                        id="navMenu">
+                        <ul
+                            class="flex flex-col h-full space-y-[28px] lg:space-y-0 lg:flex-row lg:items-center lg:space-x-[48px] uppercase text-[#000] font-medium text-base font-sans-semibold">
+                            <li><a href="index.html"
+                                    class="hover:text-black duration-300 active font-sans-bold">Home</a></li>
+                            <li><a href="about.html"
+                                    class="hover:text-black duration-300">About</a></li>
+                            <li><a href="services.html"
+                                    class="hover:text-black duration-300">Services</a></li>
+                        </ul>
+                    </nav>
+                    <div class="hidden lg:block" id="getInTouchBtn">
+                        <a href="#"
+                            class="px-[36px] py-[18px] bg-[#0176BD] text-white text-lg leading-[100%] rounded-full font-sans-bold">Get
+                            into touch</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- banner section -->
+        <section id="banner-section">
+            <div
+                class="bg-[url(../src/images/banner-img.png)] bg-no-repeat bg-cover pt-[230px] lg:pt-[322px] relative">
+                <div class="container mx-auto px-[15px] lg:px-[0px]">
+                    <div
+                        class="text-center pb-[70px] lg:pb-[140px] fade-text relative z-10">
+                        <!-- Text with improved visibility -->
+                        <!-- <p
+                            class="text-base sm:text-4xl text-black mb-[10px] sm:mb-[28px] font-sans font-medium block fade-in-text">
+                            Think Big & Be Creative
+                        </p> -->
+
+                        <h1>
+                            <span
+                                class="text-[64px]  lg:text-[100px] xl:text-[160px] Anton text-[#0176BD]  lg:leading-[130px] xl:leading-[191px] uppercase inline lg:inline-table fade-text">
+                                <span
+                                    class="animate-word me-[0] lg:me-[30px]">Hello</span>
+                                <span
+                                    class="animate-word me-[0] lg:me-[30px]">We’re</span>
+                                <br>
+                                <span
+                                    class="animate-word me-[0]  lg:me-[30px]">chameleon</span>
+                                <span
+                                    class="animate-word ">infotech</span>
+                            </span>
+                        </h1>
+
+                        <div class="fade-text">
+                            <span
+                                class="animate-word absolute top-[-45px]  lg:top-[-130px] xl:top-[-130px] left-[0px] sm:left-[60px] lg:left-[235px] bg-white max-w-[190px] md:max-w-[240px] lg:max-w-[276px] max-h-[149px] text-[#0176BD]
+                    px-[10px] py-[10px] lg:px-[18px] lg:py-[24px] backdrop-blur-box
+                        rounded-tl-[15px] rounded-tr-[15px] rounded-br-[15px] text-[12px] sm:text-[14px] xl:text-[16px] ">
+                                <h4
+                                    class="text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[44px] font-sans-bold leading-[105%] counter"
+                                    data-target="10" data-plus="true">0 </h4>
+                                <p
+                                    class="text-[12px] sm:text-[14px] xl:text-[18px] font-sans-semibold">Years
+                                    Of Experience
+                                </p>
+                            </span>
+                            <span
+                                class="animate-word absolute top-[-30px]  lg:top-[-100px] xl:top-[-100px] right-[0] sm:right-[60px] xl:right-[235px] bg-white max-w-[190px] md:max-w-[240px] lg:max-w-[276px] max-h-[149px] text-[#0176BD]
+                    px-[10px] py-[10px] lg:px-[18px] lg:py-[24px] backdrop-blur-box
+                        rounded-tl-[15px] rounded-tr-[15px] rounded-br-[15px] text-[12px] sm:text-[14px] xl:text-[16px] ">
+                                <h4
+                                    class="text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[44px] font-sans-bold leading-[105%] counter"
+                                    data-target="2014" data-plus="false">0</h4>
+                                <p
+                                    class="text-[12px] sm:text-[14px] xl:text-[18px] font-sans-semibold">Since
+                                </p>
+                            </span>
+                            <span
+                                class="animate-word absolute top-[65px]  lg:top-[110px] xl:top-[110px] right-[0] lg:right-[60px] xl:right-[60px] bg-white max-w-[190px] md:max-w-[240px] lg:max-w-[276px] max-h-[149px] text-[#0176BD]
+                            px-[10px] py-[10px] lg:px-[18px] lg:py-[24px] backdrop-blur-box
+                                rounded-tl-[15px] rounded-tr-[15px] rounded-br-[15px] text-[12px] sm:text-[14px] xl:text-[16px] ">
+                                <h4
+                                    class="text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[44px] font-sans-bold leading-[105%] counter"
+                                    data-target="2000" data-plus="true">0</h4>
+                                <p
+                                    class="text-[12px] sm:text-[14px] xl:text-[18px] font-sans-semibold">Completed
+                                    Projects</p>
+                            </span>
+                            <span
+                                class="animate-word absolute top-[55px]  lg:top-[80px] left-0 sm:left-[90px] lg:left-[150px] xl:left-[170px] 2xl:left-[200px]   bg-white max-w-[233px] max-h-[140px] text-[#0176BD]  px-[10px] py-[10px] lg:px-[18px] lg:py-[24px] backdrop-blur-box 
+                                rounded-tl-[15px] rounded-tr-[15px] rounded-br-[0px] rounded-bl-[15px] rotate-[-13deg]">
+                                <h4
+                                    class="text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[44px] font-sans-bold leading-[105%] counter"
+                                    data-target="200" data-plus="true">0</h4>
+                                <p
+                                    class="text-[12px] sm:text-[14px] xl:text-[24px] font-sans-semibold">Happy
+                                    Clients</p>
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- banner section end -->
+
+        <section class="pb-[70px] lg:pb-[150px]">
+            <div class="container mx-auto px-[15px] lg:px-[0px]">
+                <div class="text-2xl lg:text-4xl font-sans-bold text-center">
+                    At Chameleon Infotech, we provide innovative IT solutions
+                    that
+                    help businesses adapt, grow, and thrive. Like a chameleon,
+                    we
+                    tailor our strategies to your unique needs, ensuring
+                    seamless,
+                    scalable, and secure digital transformation
+                </div>
+            </div>
+        </section>
+
+        <section class="pb-[150px]">
+            <div class="container mx-auto px-4">
+                <div class="max-w-[800px] text-center mx-auto mb-[60px]">
+                    <h2
+                        class="text-[24px] sm:text-[28px] lg:text-[48px] text-[#0F0F0F] mb-[15px] font-sans-bold">
+                        Why Work With Us?
+                    </h2>
+                    <p class="text-[16px] lg:text-[18px] leading-[26px]">
+                        We are the ideal technology partner for providing
+                        scalable
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Card 1 -->
+                    <div
+                        class="why-card bg-[#F9F6FD] px-6 py-10 rounded-[25px] w-full">
+                        <div class="text-[#8D50ED] flex gap-6 items-start">
+                            <span
+                                class="font-bold bg-white px-3 py-2 rounded-full">01</span>
+                            <div>
+                                <h4
+                                    class="text-[20px] lg:text-[28px] Anton mb-4">Tailored
+                                    IT Strategies for Your Business</h4>
+                                <p class="text-base">We thoroughly analyze your
+                                    business needs and craft customized IT
+                                    solutions that align with your goals,
+                                    ensuring efficiency and scalability.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="why-card bg-[#FFF0FE] px-6 py-10 rounded-[25px] w-full">
+                        <div class="text-[#C929CC] flex gap-6 items-start">
+                            <span
+                                class="font-bold bg-white px-3 py-2 rounded-full">02</span>
+                            <div>
+                                <h4
+                                    class="text-[20px] lg:text-[28px] Anton mb-4">Proven
+                                    Expertise & Experience</h4>
+                                <p class="text-base">With years of experience in
+                                    diverse industries, we provide insights and
+                                    strategies that deliver real, measurable
+                                    results.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div
+                        class="why-card bg-[#FFEFEE] px-6 py-10 rounded-[25px] w-full">
+                        <div class="text-[#F87979] flex gap-6 items-start">
+                            <span
+                                class="font-bold bg-white px-3 py-2 rounded-full">03</span>
+                            <div>
+                                <h4
+                                    class="text-[20px] lg:text-[28px] Anton mb-4">Agile
+                                    & Scalable Development</h4>
+                                <p class="text-base">Our agile approach ensures
+                                    quick turnaround and adaptability, enabling
+                                    your business to grow without technology
+                                    limitations.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div
+                        class="why-card bg-[#F1F9F7] px-6 py-10 rounded-[25px] w-full">
+                        <div class="text-[#22C59C] flex gap-6 items-start">
+                            <span
+                                class="font-bold bg-white px-3 py-2 rounded-full">04</span>
+                            <div>
+                                <h4
+                                    class="text-[20px] lg:text-[28px] Anton mb-4">End-to-End
+                                    Support & Maintenance</h4>
+                                <p class="text-base">From development to
+                                    deployment and beyond, we provide continuous
+                                    support to keep your systems up-to-date and
+                                    secure.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pb-[150px]">
+            <div class="container mx-auto px-[15px] lg:px-[0px]">
+                <div class="mb-[60px] max-w-[611px]">
+                    <h2
+                        class="text-[24px] sm:text-[28px] lg:text-[48px] text-[#0F0F0F] mb-[15px] font-sans-bold">
+                        Our Story
+                    </h2>
+                    <p class="text-[16px] lg:text-[18px] leading-[26px]">
+                        Our work combines creativity and data-driven strategies
+                        to deliver
+                        impactful Digital marketing campaigns that drive growth.
+                    </p>
+                </div>
+                <div
+                    class="grid grid-cols-1 xl:grid-cols-2 mt-[70px] sm:mt-[122px] gap-x-[48px]">
+                    <div>
+                        <div
+                            class="p-5 sm:p-12 bg-[#F9F6FD] text-[#8D50ED] relative rounded-[25px] mb-[60px] sm:mb-[94px]"
+                            data-animate="left">
+                            <div class="flex justify-between">
+                                <p
+                                    class="px-5 sm:px-9 py-1 sm:py-2 text-sm sm:text-base border border-[#8D50ED] rounded-4xl bg-white">2012-16</p>
+                                <div
+                                    class="absolute top-[-30px] sm:top-[-45px] right-6 sm:right-[50px] lg:right-[100px]">
+                                    <div
+                                        class="p-[10px] sm:p-[18px] bg-white rounded-[20px] text-center border-t-[10px] border-[#8D50ED]">
+                                        <h4
+                                            class="text-[20px] sm:text-[30px] lg:text-[44px]">200+</h4>
+                                        <p
+                                            class="font-sans-bold text-xs sm:text-sm lg:text-lg">Completed
+                                            Projects</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-[30px] sm:mt-[60px]">
+                                <h4
+                                    class="text-[20px] lg:text-[28px] Anton mb-4 max-w-[90%]">Founded
+                                    Chameleon Infotech with a mission to
+                                    transform
+                                    businesses through technology.</h4>
+                                <p class="text-sm sm:text-base">Chameleon
+                                    Infotech was
+                                    founded
+                                    with the mission to help businesses leverage
+                                    technology for smarter, more efficient
+                                    operations. We started as a small team of
+                                    passionate IT professionals, offering
+                                    consulting, software development, and
+                                    digital
+                                    solutions to businesses seeking growth in a
+                                    rapidly evolving digital world.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="p-5 sm:p-12 bg-[#FFEFEE] text-[#F87979] relative rounded-[25px]"
+                            data-animate="left">
+                            <div class="flex justify-between">
+                                <p
+                                    class="px-5 sm:px-9 py-1 sm:py-2 text-sm sm:text-base border border-[#F87979] rounded-4xl bg-white">2012-16</p>
+                                <div
+                                    class="absolute top-[-30px] sm:top-[-45px] right-6 sm:right-[50px] lg:right-[100px]">
+                                    <div
+                                        class="p-[10px] sm:p-[18px] bg-white rounded-[20px] text-center border-t-[10px] border-[#F87979]">
+                                        <h4
+                                            class="text-[20px] sm:text-[30px] lg:text-[44px]">200+</h4>
+                                        <p
+                                            class="font-sans-bold text-xs sm:text-sm lg:text-lg">Completed
+                                            Projects</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-[30px] sm:mt-[60px]">
+                                <h4
+                                    class="text-[20px] lg:text-[28px] Anton mb-4 max-w-[90%]">Founded
+                                    Chameleon Infotech with a mission to
+                                    transform
+                                    businesses through technology.</h4>
+                                <p class="text-sm sm:text-base">Chameleon
+                                    Infotech was
+                                    founded
+                                    with the mission to help businesses leverage
+                                    technology for smarter, more efficient
+                                    operations. We started as a small team of
+                                    passionate IT professionals, offering
+                                    consulting, software development, and
+                                    digital
+                                    solutions to businesses seeking growth in a
+                                    rapidly evolving digital world.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-[60px] sm:mt-[135px]">
+                        <div
+                            class="p-5 sm:p-12 bg-[#FFF0FE] text-[#C929CC] relative rounded-[25px] mb-[60px] sm:mb-[94px]"
+                            data-animate="right">
+                            <div class="flex justify-between">
+                                <p
+                                    class="px-5 sm:px-9 py-1 sm:py-2 text-sm sm:text-base border border-[#C929CC] rounded-4xl bg-white">2016-20</p>
+                                <div
+                                    class="absolute top-[-30px] sm:top-[-45px] right-6 sm:right-[50px] lg:right-[100px]">
+                                    <div
+                                        class="p-[10px] sm:p-[18px] bg-white rounded-[20px] text-center border-t-[10px] border-[#C929CC]">
+                                        <h4
+                                            class="text-[20px] sm:text-[30px] lg:text-[44px]">200+</h4>
+                                        <p
+                                            class="font-sans-bold text-xs sm:text-sm lg:text-lg">Completed
+                                            Projects</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-[30px] sm:mt-[60px]">
+                                <h4
+                                    class="text-[20px] lg:text-[28px] Anton mb-4 max-w-[90%]">Founded
+                                    Chameleon Infotech with a mission to
+                                    transform
+                                    businesses through technology.</h4>
+                                <p class="text-sm sm:text-base">Chameleon
+                                    Infotech was
+                                    founded
+                                    with the mission to help businesses leverage
+                                    technology for smarter, more efficient
+                                    operations. We started as a small team of
+                                    passionate IT professionals, offering
+                                    consulting, software development, and
+                                    digital
+                                    solutions to businesses seeking growth in a
+                                    rapidly evolving digital world.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="p-5 sm:p-12 bg-[#F1F9F7] text-[#22C59C] relative rounded-[25px] mb-[60px] sm:mb-[94px]"
+                            data-animate="right">
+                            <div class="flex justify-between">
+                                <p
+                                    class="px-5 sm:px-9 py-1 sm:py-2 text-sm sm:text-base border border-[#22C59C] rounded-4xl bg-white">2022-25</p>
+                                <div
+                                    class="absolute top-[-30px] sm:top-[-45px] right-6 sm:right-[50px] lg:right-[100px]">
+                                    <div
+                                        class="p-[10px] sm:p-[18px] bg-white rounded-[20px] text-center border-t-[10px] border-[#22C59C]">
+                                        <h4
+                                            class="text-[20px] sm:text-[30px] lg:text-[44px]">200+</h4>
+                                        <p
+                                            class="font-sans-bold text-xs sm:text-sm lg:text-lg">Completed
+                                            Projects</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-[30px] sm:mt-[60px]">
+                                <h4
+                                    class="text-[20px] lg:text-[28px] Anton mb-4 max-w-[90%]">Founded
+                                    Chameleon Infotech with a mission to
+                                    transform
+                                    businesses through technology.</h4>
+                                <p class="text-sm sm:text-base">Chameleon
+                                    Infotech was
+                                    founded
+                                    with the mission to help businesses leverage
+                                    technology for smarter, more efficient
+                                    operations. We started as a small team of
+                                    passionate IT professionals, offering
+                                    consulting, software development, and
+                                    digital
+                                    solutions to businesses seeking growth in a
+                                    rapidly evolving digital world.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pb-[150px]">
+            <div class="container mx-auto px-[15px]">
+                <div>
+                    <div
+                        class="flex flex-col lg:flex-row justify-between gap-[20px] lg:gap-[100px] items-start">
+                        <div
+                            class="common-heading max-w-[390px] xl:max-w-[700px] sticky-section sticky top-36 z">
+                            <h2
+                                class="text-[24px] sm:text-[28px] lg:text-[36px] xl-[48px] text-[#0F0F0F] mb-[15px] font-sans-bold">
+                                Our Mission, Vision & Values – The Foundation of
+                                Innovation
+                            </h2>
+                            <p
+                                class="text-[16px] lg:text-[18px] leading-[26px]">We
+                                are the ideal technology partner for providing
+                                scalable</p>
+                        </div>
+                        <div class="  overflow-visible">
+                            <div class="feedback-card max-w-[722px] mb-[47px]">
+                                <div
+                                    class="bg-[#F9F6FD] px-6 py-10 rounded-[25px] w-full">
+                                    <div
+                                        class="text-[#8D50ED]">
+                                        <div>
+                                            <h4
+                                                class="text-[20px] lg:text-[28px] Anton mb-4">Our
+                                                Mission 🚀</h4>
+                                            <p class="text-base">At Chameleon
+                                                Infotech, our mission is to
+                                                empower businesses with
+                                                innovative, scalable, and secure
+                                                IT solutions. We strive to
+                                                bridge the gap between
+                                                technology and business success
+                                                by providing expert consultancy,
+                                                cutting-edge development, and
+                                                tailored digital strategies.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="feedback-card max-w-[722px] mb-[47px]">
+                                <div
+                                    class="bg-[#FFF0FE] px-6 py-10 rounded-[25px] w-full">
+                                    <div
+                                        class="text-[#C929CC]">
+                                        <div>
+                                            <h4
+                                                class="text-[20px] lg:text-[28px] Anton mb-4">Our
+                                                Values 💡</h4>
+                                            <p class="text-base">We envision a
+                                                future where businesses
+                                                seamlessly integrate technology
+                                                to optimize operations, enhance
+                                                security, and drive sustainable
+                                                growth. Our goal is to be a
+                                                trusted IT partner, helping
+                                                companies adapt and thrive in
+                                                the ever-evolving digital
+                                                landscape.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="feedback-card max-w-[722px] ">
+                                <div
+                                    class="bg-[#FFEFEE] px-6 py-10 rounded-[25px] w-full">
+                                    <div
+                                        class="text-[#F87979]">
+                                        <div>
+                                            <h4
+                                                class="text-[20px] lg:text-[28px] Anton mb-4">Our
+                                                vision 🔍</h4>
+                                            <p class="text-base">At Chameleon
+                                                Infotech, our values define who
+                                                we are and how we work. We
+                                                believe in innovation,
+                                                constantly exploring new
+                                                technologies to deliver
+                                                forward-thinking IT solutions.
+                                                Integrity is at the core of our
+                                                approach—we build trust through
+                                                transparency, honesty, and
+                                                reliability. Our client-centric
+                                                mindset ensures that we tailor
+                                                every solution to meet unique
+                                                business needs, fostering
+                                                long-term success. We are
+                                                committed to excellence,
+                                                striving for high-quality,
+                                                scalable, and secure IT
+                                                solutions. Like a chameleon,
+                                                adaptability is our strength—we
+                                                evolve with industry trends to
+                                                keep businesses ahead in the
+                                                digital world.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- blog-section-start  -->
+        <section class="pb-[150px]">
+            <div class="container mx-auto px-[15px]">
+                <h2
+                    class="font-sans-bold text-[26px] sm:text-[36px] lg:text-[48px] mb-[16px] max-w-[209px] sm:max-w-[386px] mx-auto text-center">
+                    Tech Trends & IT Solutions Blog
+                </h2>
+
+                <div class="flex mt-10 flex-wrap justify-center">
+                    <!-- Card 1 with hover text -->
+                    <div
+                        class="max-w-[478px] text-base sm:text-lg group relative overflow-hidden rounded-[20px] p-[30px] cursor-pointer">
+                        <div class="image">
+                            <img src="images/blog-image.png" alt
+                                class="w-full block rounded-[20px]">
+                        </div>
+
+                        <!-- Hover overlay with text -->
+                        <div
+                            class="blog-overlay absolute inset-0 bg-[#F9F6FD] text-[#8D50ED] p-6 scale-0 group-hover:scale-100 transition-transform duration-300 ease-in-out rounded-[20px] flex items-center justify-center text-center text-[14px] sm:text-[16px] leading-[1.6] font-semibold rotate-[-5deg] max-w-[435px] max-h-[435px] top-[25px] left-[20px]">
+                            Welcome to our comprehensive guide on dropshipping—a
+                            modern, dynamic approach to ecommerce that empowers
+                            aspiring entrepreneurs to break free from
+                            traditional business models.
+                            <br><br>
+                            In today’s digital era, dropshipping enables you to
+                            build an online store without the burden of managing
+                            inventory, making it accessible for those new to
+                            ecommerce or digital.
+                            <br><br>
+                            With minimal upfront costs and reduced operational
+                            risk, this business model paves the way for
+                            financial freedom and a flexible work–life balance.
+                        </div>
+
+                        <!-- Static content -->
+                        <div class="flex justify-between mt-7">
+                            <h6
+                                class="text-[#8D50ED] font-sans-bold">SHOPIFY</h6>
+                            <p class="font-sans-semibold">February 14, 2025</p>
+                        </div>
+
+                        <div>
+                            <p class="font-sans-bold mt-[16px]">What is
+                                Dropshipping in Simple Terms? The Complete
+                                Beginner's Guide</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 (static) -->
+                    <div
+                        class="max-w-[478px] text-lg group relative overflow-hidden rounded-[20px] p-[30px] cursor-pointer">
+                        <div class="image">
+                            <img src="images/blog-image.png" alt
+                                class="w-full rounded-[20px]">
+                        </div>
+                        <!-- Hover overlay with text -->
+                        <div
+                            class="blog-overlay absolute inset-0 bg-[#FFF0FE] text-[#C929CC] p-6 scale-0 group-hover:scale-100 transition-transform duration-300 ease-in-out rounded-[20px] flex items-center justify-center text-center text-[14px] sm:text-[16px] leading-[1.6] font-semibold rotate-[-5deg] max-w-[435px] max-h-[435px] top-[25px] left-[20px]">
+                            Welcome to our comprehensive guide on dropshipping—a
+                            modern, dynamic approach to ecommerce that empowers
+                            aspiring entrepreneurs to break free from
+                            traditional business models.
+                            <br><br>
+                            In today’s digital era, dropshipping enables you to
+                            build an online store without the burden of managing
+                            inventory, making it accessible for those new to
+                            ecommerce or digital.
+                            <br><br>
+                            With minimal upfront costs and reduced operational
+                            risk, this business model paves the way for
+                            financial freedom and a flexible work–life balance.
+                        </div>
+                        <div class="flex justify-between mt-7">
+                            <h6
+                                class="text-[#C929CC] font-sans-bold">SHOPIFY</h6>
+                            <p class="font-sans-semibold">February 14, 2025</p>
+                        </div>
+                        <div>
+                            <p class="font-sans-bold mt-[16px]">What is
+                                Dropshipping in Simple Terms? The Complete
+                                Beginner's Guide</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 (static) -->
+                    <div
+                        class="max-w-[478px] text-lg group relative overflow-hidden rounded-[20px] p-[30px] cursor-pointer">
+                        <div class="image">
+                            <img src="images/blog-image.png" alt
+                                class="w-full rounded-[20px]">
+                        </div>
+                        <!-- Hover overlay with text -->
+                        <div
+                            class="blog-overlay absolute inset-0 bg-[#FFF8EE] text-[#EDA623] p-6 scale-0 group-hover:scale-100 transition-transform duration-300 ease-in-out rounded-[20px] flex items-center justify-center text-center text-[14px] sm:text-[16px] leading-[1.6] font-semibold rotate-[-5deg] max-w-[435px] max-h-[435px] top-[25px] left-[20px]">
+                            Welcome to our comprehensive guide on dropshipping—a
+                            modern, dynamic approach to ecommerce that empowers
+                            aspiring entrepreneurs to break free from
+                            traditional business models.
+                            <br><br>
+                            In today’s digital era, dropshipping enables you to
+                            build an online store without the burden of managing
+                            inventory, making it accessible for those new to
+                            ecommerce or digital.
+                            <br><br>
+                            With minimal upfront costs and reduced operational
+                            risk, this business model paves the way for
+                            financial freedom and a flexible work–life balance.
+                        </div>
+                        <div class="flex justify-between mt-7">
+                            <h6
+                                class="text-[#EDA623] font-sans-bold">SHOPIFY</h6>
+                            <p class="font-sans-semibold">February 14, 2025</p>
+                        </div>
+                        <div>
+                            <p class="font-sans-bold mt-[16px]">What is
+                                Dropshipping in Simple Terms? The Complete
+                                Beginner's Guide</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- blog-section-end -->
+
+        <!-- register-section -->
+        <section class="register py-[120px] bg-[#ECF5FE]">
+            <div class="container mx-auto px-[15px] lg:px-[0px]">
+                <div
+                    class="max-w-[625px] lg:max-w-[720px] mx-auto text-center">
+                    <h2
+                        class="font-sans-bold text-[26px] sm:text-[36px] lg:text-[48px] mb-[16px] ">Let’s
+                        Connect & Build Something Great Together!</h2>
+                    <p
+                        class="text-[14px] sm:text-[16px] lg:text-[18px] mb-[20px] sm:mb-[36px]">Whether
+                        you need IT
+                        consulting, custom solutions, or technical support,
+                        our
+                        team is ready to assist you. Let’s discuss how we
+                        can
+                        help your business grow!</p>
+                    <form action>
+                        <div
+                            class="flex flex-col sm:flex-row gap-[15px] lg:gap-[24px]">
+                            <div
+                                class="field  pl-[28px] bg-white rounded-full w-full flex gap-[20px]">
+                                <img src="images/svg/mail.svg" alt
+                                    class="max-w-[100%] py-[20px]">
+                                <input type="email"
+                                    placeholder="Please Enter Your Email"
+                                    class="w-full outline-none">
+                            </div>
+                            <input type="submit" value="Register"
+                                class="px-[48px] py-[10px] sm:py-[15px] lg:py-[20px] bg-[#0176BD] rounded-full text-white DM-Sans-bold cursor-pointer max-w-[160px] mx-auto">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- register-section end -->
+
+        <footer class="footer pt-[100px] pb-[40px] ">
+            <div class="container mx-auto px-[15px] lg:px-[0px] ">
+                <div
+                    class="flex-col text-center sm:text-left justify-center items-center sm:items-start sm:flex-row flex gap-[50px] lg:gap-[150px] ">
+                    <div class="xl:w-[100%]">
+                        <a href>
+                            <img src="images/logo.png" alt
+                                class="max-w-[100%] mx-auto sm:mx-0">
+                        </a>
+                        <p class="mt-[28px] max-w-[442px]">Founded in 2011,
+                            Chameleon Infotech
+                            LLP is a leading
+                            website design and development company in India
+                            that
+                            offers services globally.</p>
+                    </div>
+                    <div class="sm:max-w-[65px]">
+                        <h4
+                            class="text-[22px] mb-[28px] font-sans-bold">Page</h4>
+                        <ul>
+                            <li class="mb-[18px]"><a href>Home</a></li>
+                            <li class="mb-[18px]"><a href>About</a></li>
+                            <li class="mb-[18px]"><a href>Services</a></li>
+                            <li class="mb-[18px]"><a href>Contact</a></li>
+                            <li class="mb-[18px]"><a href>Portfolio</a></li>
+                        </ul>
+                    </div>
+                    <div class="max-w-[442px] sm:max-w-[262px]">
+                        <h4
+                            class="text-[22px] mb-[28px] font-sans-bold">Contact</h4>
+                        <div
+                            class="flex gap-[14px] mb-[18px] items-center justify-center sm:justify-start">
+                            <img src="images/svg/Vector.svg" alt>
+                            <p>408, Panvel Point, Nr. Sudama
+                                Chowk, Mota Varachha,
+                                Surat - 394101</p>
+                        </div>
+                        <div
+                            class="flex gap-[14px] mb-[18px] items-center justify-center sm:justify-start">
+                            <img src="images/svg/Vector (1).svg" alt>
+                            <p>+91 (909)-949 9095</p>
+                        </div>
+                        <div
+                            class="flex gap-[14px] mb-[18px] items-center justify-center sm:justify-start">
+                            <img src="images/svg/Group 388.svg" alt>
+                            <a href>info@chameleoninfotech.com</a>
+                        </div>
+                    </div>
+                </div>
+                <ul
+                    class="flex justify-center flex-wrap mt-[50px] text-sm pt-[24px] border-t-1 border-[#40404033]">
+                    <li
+                        class="px-4 relative after:content-['|'] after:absolute after:right-0"><a
+                            href="terms-conditions.html">Terms &amp;
+                            Conditions</a>
+                    </li>
+                    <li
+                        class="px-4 relative after:content-['|'] after:absolute after:right-0"><a
+                            href="privacy-policy.html">Privacy
+                            Policy</a></li>
+                    <li class="px-4">2025 © Chameleon. All rights reserved.
+                    </li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/gsap.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/ScrollTrigger.min.js"></script>
+        <script src="js/common.js"></script>
+        <script src="js/about.js"></script>
+    </body>
+</html>
