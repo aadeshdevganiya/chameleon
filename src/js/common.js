@@ -96,8 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", () => {
     const counters = document.querySelectorAll(".counter");
 
-    counters.forEach(counter => {
-        // Check if it should end with '+'
+    const animateCounter = (counter) => {
         const hasPlus = counter.getAttribute("data-plus") === "true";
         const target = +counter.getAttribute("data-target");
 
@@ -113,8 +112,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
         );
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                observer.unobserve(entry.target); // Ek baar animate hone ke baad fir se dobara na ho
+            }
+        });
+    }, {
+        threshold: 0.5 // Jab 50% counter visible ho tab trigger kare
+    });
+
+    counters.forEach(counter => {
+        observer.observe(counter);
     });
 });
+
 
 // auto-slider
 const images = document.querySelectorAll('.slider-img');
@@ -239,7 +254,6 @@ mm.add("(max-width: 767px)", () => {
         });
     });
 });
-
 
 
 // Success Stories 

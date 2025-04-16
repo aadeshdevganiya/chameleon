@@ -1,46 +1,49 @@
+// Register plugin
 gsap.registerPlugin(ScrollTrigger);
 
-const cards = document.querySelectorAll(".why-card");
+// Animate the Hero Text (first section)
+gsap.from(".banner-subtitle", {
+    scrollTrigger: {
+        trigger: ".banner-subtitle",
+        start: "top 80%",
+        toggleActions: "play reverse play reverse",
+    },
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    ease: "power3.out"
+});
 
-cards.forEach((card, index) => {
-    const direction = index % 2 === 0 ? -1000 : 1000; // left for even, right for odd
+gsap.from(".why-card", {
+    scrollTrigger: {
+        trigger: ".why-card",
+        start: "top 80%", // animation starts when card is in view
+        toggleActions: "play none none none"
+    },
+    opacity: 0,
+    y: 50,
+    duration: 0.8,
+    stagger: 0.3,
+    ease: "power2.out"
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray(".feedback-card").forEach((card, index) => {
     gsap.from(card, {
+        y: 60,
+        scale: 0.8,
+        rotateZ: index % 2 === 0 ? 8 : 8,
+        opacity: 0.5,
+        duration: 1.2,
+        ease: "power3.out",
         scrollTrigger: {
             trigger: card,
             start: "top 85%",
-            toggleActions: "play reverse play reverse",
-        },
-        x: direction,
-        opacity: 0,
-        duration: 1,
-        ease: "power3.out"
-    });
-});
-
-gsap.utils.toArray('[data-animate="left"]').forEach((elem) => {
-    gsap.from(elem, {
-        x: -100,
-        opacity: 0,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-            trigger: elem,
-            start: "top 80%",
-            toggleActions: "play reverse play reverse",
-        },
-    });
-});
-
-gsap.utils.toArray('[data-animate="right"]').forEach((elem) => {
-    gsap.from(elem, {
-        x: 100,
-        opacity: 0,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-            trigger: elem,
-            start: "top 80%",
-            toggleActions: "play reverse play reverse",
+            end: "bottom 30%",
+            toggleActions: "play none none reverse",
+            scrub: true,
+            once: false,
         },
     });
 });
