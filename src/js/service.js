@@ -34,4 +34,4 @@ toggles.forEach((toggle) => {
         // Toggle icon
         icon.textContent = content.classList.contains("hidden") ? "+" : "–";
     });
-});
+});   
