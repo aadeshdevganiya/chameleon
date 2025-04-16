@@ -264,6 +264,9 @@
   .top-4 {
     top: calc(var(--spacing) * 4);
   }
+  .top-20 {
+    top: calc(var(--spacing) * 20);
+  }
   .top-36 {
     top: calc(var(--spacing) * 36);
   }
