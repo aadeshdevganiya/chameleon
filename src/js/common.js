@@ -1,6 +1,12 @@
+function animateResponsiveNavItems() {
+    if (window.innerWidth < 1024) {
+        gsap.fromTo("#navMenu ul li",
+            { opacity: 0, y: 20 },
+            { opacity: 1, y: 0, stagger: 0.2, duration: 0.8, ease: "power3.out" }
+        );
+    }
+}
 
-
-// header 
 document.addEventListener("DOMContentLoaded", function () {
     gsap.from("#logo img", {
         opacity: 0,
@@ -18,14 +24,16 @@ document.addEventListener("DOMContentLoaded", function () {
         ease: "power3.out"
     });
 
-    gsap.from("#navMenu ul li", {
-        opacity: 0,
-        y: 20,
-        stagger: 0.2,
-        duration: 1,
-        delay: 0.3,
-        ease: "power3.out"
-    });
+    if (window.innerWidth >= 1024) {
+        gsap.from("#navMenu ul li", {
+            opacity: 0,
+            y: 20,
+            stagger: 0.2,
+            duration: 0.8,
+            delay: 0.2,
+            ease: "power3.out"
+        });
+    }
 
     gsap.from("#getInTouchBtn", {
         opacity: 0,
@@ -38,10 +46,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 $(document).ready(function () {
     $('.burgerMenu').click(function () {
-        $('nav').toggleClass('hidden');
+        const nav = $('#navMenu');
+        nav.toggleClass('hidden');
+
         $(this).find('span').eq(0).toggleClass('rotate-45 translate-y-[8px]');
         $(this).find('span').eq(1).toggleClass('opacity-0');
         $(this).find('span').eq(2).toggleClass('rotate-135 translate-y-[-8px]');
+
+        // Animate when menu opens
+        if (!nav.hasClass('hidden')) {
+            animateResponsiveNavItems();
+        }
     });
 });
 

@@ -22,7 +22,6 @@
   src: url(../src/font/Anton-Regular.ttf);
 }
 
-
 .font-sans {
   font-family: "DM-Sans";
 }
@@ -39,14 +38,19 @@
   font-family: "Anton";
 }
 
-.backdrop-blur-box {
-  background-color: rgb(255 255 255 / 54%);
-  backdrop-filter: blur(6px);
+h1, h2, h3, h4, h5, h6 {
+  font-family: "DM-Sans-bold";
 }
 
-h1,h2,h3,h4,h5,h6{
-    font-family: "DM-Sans-bold";
+@theme {
+  --color-primary: #0176BD;
+  --color-secondary: #fff;
+  --color-black: #000;
+  --font-primary: "DM-Sans";
 }
+
+
+/* style css */
 
 @layer utilities {
   @keyframes slide {
@@ -64,22 +68,48 @@ h1,h2,h3,h4,h5,h6{
   }
 }
 
+.backdrop-blur-box {
+  background-color: rgb(255 255 255 / 54%);
+  backdrop-filter: blur(6px);
+}
 
 .background-text {
   position: sticky;
   top: 0;
   z-index: -1;
 }
+
 @media (max-width: 400px) {
-   .blog-overlay{
+  .blog-overlay {
     font-size: 12px;
     max-height: 360px;
     rotate: -2deg;
     border-radius: 10px;
-   }
+  }
 }
 
-.why-card{
+.why-card {
   position: relative;
 }
 
+.dot::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 3px;
+  width: 3px;
+  border-radius: 50%;
+  background: red;
+  z-index: 6
+}
+
+.clock.aus_clock {
+  background-color: #000;
+  border-color: #fff;
+}
+
+.clock.aus_clock .dot, .clock.aus_clock .hour-hand, .clock.aus_clock .minute-hand {
+  background: #fff;
+}

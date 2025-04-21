@@ -15,12 +15,6 @@ gsap.to('.horizontal', {
     }
 });
 
-
-
-
-
-
-
 const toggles = document.querySelectorAll(".accordion-toggle");
 
 toggles.forEach((toggle) => {
