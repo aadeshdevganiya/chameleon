@@ -30,6 +30,10 @@
   --font-heading: "Anton", sans-serif;
 }
 
+body {
+  @apply font-primary
+}
+
 h1, h2, h4 {
   @apply font-heading
 }

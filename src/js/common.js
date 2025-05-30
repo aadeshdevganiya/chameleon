@@ -249,7 +249,7 @@ gsap.utils.toArray(".section").forEach((section, index) => {
         },
         opacity: 1,
         y: 150,
-        rotation: 10,
+        rotation: 5,
         ease: "power4.out",
     });
 });
@@ -459,44 +459,44 @@ gsap.utils.toArray(".feedback-card").forEach((card, index) => {
 });
 
 // footer
- window.addEventListener("load", () => {
-    gsap.registerPlugin(ScrollTrigger);
+window.addEventListener("load", () => {
+  gsap.registerPlugin(ScrollTrigger);
 
-    // Animate footer items (already covered)
-    gsap.utils.toArray("#footer [data-animate]").forEach((el, i) => {
-      gsap.fromTo(el, {
-        opacity: 0,
-        y: 30
-      }, {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        ease: "power3.out",
-        delay: i * 0.2,
-        scrollTrigger: {
-          trigger: el,
-          start: "top 85%",
-          toggleActions: "play none none none"
-        }
-      });
-    });
-
-    // Animate register section
-    gsap.utils.toArray("#register [data-animate]").forEach((el, i) => {
-      gsap.fromTo(el, {
-        opacity: 0,
-        y: 40
-      }, {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power3.out",
-        delay: i * 0.3,
-        scrollTrigger: {
-          trigger: "#register",
-          start: "top 80%",
-          toggleActions: "play none none none"
-        }
-      });
+  // Animate all footer blocks
+  gsap.utils.toArray("#footer [data-animate]").forEach((el, i) => {
+    gsap.fromTo(el, {
+      opacity: 0,
+      y: 30
+    }, {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      ease: "power3.out",
+      delay: i * 0.2,
+      scrollTrigger: {
+        trigger: "#footer",  // Use entire footer as the trigger
+        start: "top 85%",
+        toggleActions: "play none none none"
+      }
     });
   });
+
+  // Animate register section
+  gsap.utils.toArray("#register [data-animate]").forEach((el, i) => {
+    gsap.fromTo(el, {
+      opacity: 0,
+      y: 40
+    }, {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: "power3.out",
+      delay: i * 0.3,
+      scrollTrigger: {
+        trigger: "#register",
+        start: "top 80%",
+        toggleActions: "play none none none"
+      }
+    });
+  });
+});

@@ -314,7 +314,7 @@
             </div>
         </section>
 
-        <footer class="footer pt-[50px] sm:pt-[100px] pb-[40px]" id="footer">
+         <footer class="footer pt-[50px] sm:pt-[100px] pb-[40px]" id="footer">
             <div class="container mx-auto px-[15px] lg:px-[0px]">
                 <div
                     class="flex-col text-center sm:text-left justify-center items-center sm:items-start sm:flex-row flex gap-[50px] lg:gap-[150px]">
@@ -366,25 +366,27 @@
                 </div>
                 <ul
                     class="flex justify-center flex-wrap mt-[50px] text-sm pt-[24px] border-t-1 border-[#40404033]"
-                    data-animate>
+                    id="footer-links">
                     <li
-                        class="px-4 relative after:content-['|'] after:absolute after:right-0">
+                        class="px-4 relative after:content-['|'] after:absolute after:right-0"
+                        data-animate>
                         <a href="terms-conditions.html">Terms &amp;
                             Conditions</a>
                     </li>
                     <li
-                        class="px-4 relative after:content-['|'] after:absolute after:right-0">
+                        class="px-4 relative after:content-['|'] after:absolute after:right-0"
+                        data-animate>
                         <a href="privacy-policy.html">Privacy Policy</a>
                     </li>
-                    <li class="px-4">2025 © Chameleon. All rights reserved.</li>
+                    <li class="px-4" data-animate>2025 © Chameleon. All rights
+                        reserved.</li>
                 </ul>
             </div>
         </footer>
 
-        <script src="js/jquery-3.6.0.min.js"></script>
         <script src="js/gsap.min.js"></script>
         <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/ScrollTrigger.min.js"></script>
+            src="js/ScrollTrigger.min.js"></script>
         <script src="js/common.js"></script>
         <script>
             function rotateClockHands(clockSelector, timeZone) {
