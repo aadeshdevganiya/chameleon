@@ -4201,9 +4201,6 @@
     }
   }
 }
-ul li a:hover {
-  color: var(--color-primary);
-}
 body {
   font-family: var(--font-primary);
 }
@@ -4224,6 +4221,9 @@ header nav ul li a.active, header nav ul li a:hover {
 }
 .clock.aus_clock .dot, .clock.aus_clock .hour-hand, .clock.aus_clock .minute-hand {
   background-color: var(--color-white);
+}
+ul li a:hover {
+  color: var(--color-primary);
 }
 @layer utilities {
   @keyframes slide {
