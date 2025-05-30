@@ -33,23 +33,23 @@
 
 gsap.registerPlugin(ScrollTrigger);
 
-let horizontalSection = document.querySelector('#horizontal-scoll');
+let horizontalSection = document.querySelector('.horizontal'); // only inner content
 
-console.log(horizontalSection.scrollWidth);
-
-gsap.to('.horizontal', {
-  x: () => horizontalSection.scrollWidth * -1,
-  xPercent: 100,
+gsap.to(horizontalSection, {
+  x: () => -(horizontalSection.scrollWidth - window.innerWidth), // scroll only the extra width
+  ease: "none",
   scrollTrigger: {
-    trigger: '.horizontal',
-    start: 'center center',
-    end: '+=2000px',
+    trigger: '#horizontal-scoll', // outer container
+    start: 'top top',
+    end: () => '+=' + (horizontalSection.scrollWidth - window.innerWidth),
     pin: true,
-    scrub: 5,
-    
-    invalidateOnRefresh: true
+    scrub: 1,
+    anticipatePin: 1,
+    invalidateOnRefresh: true,
+    markers: false // turn on if you want to debug
   }
 });
+
 
 // footer
 window.addEventListener("load", () => {
