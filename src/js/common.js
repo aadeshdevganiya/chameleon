@@ -404,41 +404,6 @@ gsap.to({}, {
 });
 
 
-
-// gsap.registerPlugin(ScrollTrigger);
-
-// document.addEventListener("DOMContentLoaded", () => {
-//     const spans = document.querySelectorAll('.animate-text span');
-
-//     const lastSpan = spans[spans.length - 1];
-//     const lastSpanOffset = lastSpan.offsetTop;
-
-//     spans.forEach((span) => {
-//         const offsetY = lastSpanOffset - span.offsetTop;
-
-//         // Set all spans to start stacked on the last line (visually)
-//         gsap.set(span, {
-//             y: offsetY
-//         });
-//     });
-
-//     // Animate them into their original positions
-//     gsap.to(spans, {
-//         y: 0,
-//         stagger: 0.2,
-//         duration: 1,
-//         ease: "power4.out",
-//         scrollTrigger: {
-//             trigger: '.animate-text-wrapper',
-//             start: 'top 80%',
-//             end: 'bottom 20%',
-//             scrub: true,
-//             markers: true
-//         }
-//     });
-// });
-
-
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -474,7 +439,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // freedback scrolltrigger 
 gsap.registerPlugin(ScrollTrigger);
-
 gsap.utils.toArray(".feedback-card").forEach((card, index) => {
     gsap.from(card, {
         y: 60,
@@ -494,10 +458,45 @@ gsap.utils.toArray(".feedback-card").forEach((card, index) => {
     });
 });
 
+// footer
+ window.addEventListener("load", () => {
+    gsap.registerPlugin(ScrollTrigger);
 
+    // Animate footer items (already covered)
+    gsap.utils.toArray("#footer [data-animate]").forEach((el, i) => {
+      gsap.fromTo(el, {
+        opacity: 0,
+        y: 30
+      }, {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        delay: i * 0.2,
+        scrollTrigger: {
+          trigger: el,
+          start: "top 85%",
+          toggleActions: "play none none none"
+        }
+      });
+    });
 
-
-
-
-
-
+    // Animate register section
+    gsap.utils.toArray("#register [data-animate]").forEach((el, i) => {
+      gsap.fromTo(el, {
+        opacity: 0,
+        y: 40
+      }, {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power3.out",
+        delay: i * 0.3,
+        scrollTrigger: {
+          trigger: "#register",
+          start: "top 80%",
+          toggleActions: "play none none none"
+        }
+      });
+    });
+  });

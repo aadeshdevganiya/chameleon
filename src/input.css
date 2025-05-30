@@ -38,6 +38,7 @@ header nav ul li a.active, header nav ul li a:hover {
   @apply text-primary
 }
 
+
 /* style css */
 
 @layer utilities {
@@ -66,6 +67,14 @@ header nav ul li a.active, header nav ul li a:hover {
   top: 0;
   z-index: -1;
 }
+
+[data-animate] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: none !important;
+  will-change: opacity, transform;
+}
+
 
 @media (max-width: 400px) {
   .blog-overlay {
