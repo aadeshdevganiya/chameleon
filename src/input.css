@@ -42,8 +42,17 @@ header nav ul li a.active, header nav ul li a:hover {
   @apply text-primary
 }
 
+.background-text {
+  @apply sticky top-0 z-[-1]
+}
 
-/* style css */
+.clock.aus_clock {
+  @apply bg-black border-white
+}
+
+.clock.aus_clock .dot, .clock.aus_clock .hour-hand, .clock.aus_clock .minute-hand {
+  @apply bg-white
+}
 
 @layer utilities {
   @keyframes slide {
@@ -66,19 +75,12 @@ header nav ul li a.active, header nav ul li a:hover {
   backdrop-filter: blur(6px);
 }
 
-.background-text {
-  position: sticky;
-  top: 0;
-  z-index: -1;
-}
-
 [data-animate] {
   opacity: 0;
   transform: translateY(30px);
   transition: none !important;
   will-change: opacity, transform;
 }
-
 
 @media (max-width: 400px) {
   .blog-overlay {
@@ -87,30 +89,4 @@ header nav ul li a.active, header nav ul li a:hover {
     rotate: -2deg;
     border-radius: 10px;
   }
-}
-
-.why-card {
-  position: relative;
-}
-
-.dot::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 3px;
-  width: 3px;
-  border-radius: 50%;
-  background: red;
-  z-index: 6
-}
-
-.clock.aus_clock {
-  background-color: #000;
-  border-color: #fff;
-}
-
-.clock.aus_clock .dot, .clock.aus_clock .hour-hand, .clock.aus_clock .minute-hand {
-  background: #fff;
 }

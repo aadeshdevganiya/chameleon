@@ -352,9 +352,6 @@
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
-  .left-1 {
-    left: calc(var(--spacing) * 1);
-  }
   .left-1\/2 {
     left: calc(1/2 * 100%);
   }
@@ -784,9 +781,6 @@
   .min-h-screen {
     min-height: 100vh;
   }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
-  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
@@ -1029,10 +1023,6 @@
   .translate-full {
     --tw-translate-x: 100%;
     --tw-translate-y: 100%;
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .-translate-x-1 {
-    --tw-translate-x: calc(var(--spacing) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-x-1\/2 {
@@ -1376,9 +1366,6 @@
   }
   .justify-items-stretch {
     justify-items: stretch;
-  }
-  .gap-3 {
-    gap: calc(var(--spacing) * 3);
   }
   .gap-3\.5 {
     gap: calc(var(--spacing) * 3.5);
@@ -1857,12 +1844,6 @@
   }
   .bg-\[url\(\.\.\/src\/assets\/images\/service-banner\.png\)\] {
     background-image: url(../src/assets/images/service-banner.png);
-  }
-  .bg-\[url\(\.\.\/src\/images\/banner-img\.png\)\] {
-    background-image: url(../src/images/banner-img.png);
-  }
-  .bg-\[url\(\.\.\/src\/images\/service-banner\.png\)\] {
-    background-image: url(../src/images/service-banner.png);
   }
   .bg-none {
     background-image: none;
@@ -2969,10 +2950,73 @@
       position: absolute;
     }
   }
+  .after\:top-1\/2 {
+    &::after {
+      content: var(--tw-content);
+      top: calc(1/2 * 100%);
+    }
+  }
   .after\:right-0 {
     &::after {
       content: var(--tw-content);
       right: calc(var(--spacing) * 0);
+    }
+  }
+  .after\:left-1\/2 {
+    &::after {
+      content: var(--tw-content);
+      left: calc(1/2 * 100%);
+    }
+  }
+  .after\:z-\[6\] {
+    &::after {
+      content: var(--tw-content);
+      z-index: 6;
+    }
+  }
+  .after\:h-\[3px\] {
+    &::after {
+      content: var(--tw-content);
+      height: 3px;
+    }
+  }
+  .after\:w-\[3px\] {
+    &::after {
+      content: var(--tw-content);
+      width: 3px;
+    }
+  }
+  .after\:-translate-x-1\/2 {
+    &::after {
+      content: var(--tw-content);
+      --tw-translate-x: calc(calc(1/2 * 100%) * -1);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .after\:-translate-y-1\/2 {
+    &::after {
+      content: var(--tw-content);
+      --tw-translate-y: calc(calc(1/2 * 100%) * -1);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .after\:rounded-full {
+    &::after {
+      content: var(--tw-content);
+      border-radius: calc(infinity * 1px);
+    }
+  }
+  .after\:bg-red-500 {
+    &::after {
+      content: var(--tw-content);
+      background-color: var(--color-red-500);
+    }
+  }
+  .after\:content-\[\'\'\] {
+    &::after {
+      content: var(--tw-content);
+      --tw-content: '';
+      content: var(--tw-content);
     }
   }
   .after\:content-\[\'\|\'\] {
@@ -4165,6 +4209,18 @@ h1, h2, h4 {
 header nav ul li a.active, header nav ul li a:hover {
   color: var(--color-primary);
 }
+.background-text {
+  position: sticky;
+  top: calc(var(--spacing) * 0);
+  z-index: -1;
+}
+.clock.aus_clock {
+  border-color: var(--color-white);
+  background-color: var(--color-black);
+}
+.clock.aus_clock .dot, .clock.aus_clock .hour-hand, .clock.aus_clock .minute-hand {
+  background-color: var(--color-white);
+}
 @layer utilities {
   @keyframes slide {
     0% {
@@ -4182,11 +4238,6 @@ header nav ul li a.active, header nav ul li a:hover {
   background-color: rgb(255 255 255 / 54%);
   backdrop-filter: blur(6px);
 }
-.background-text {
-  position: sticky;
-  top: 0;
-  z-index: -1;
-}
 [data-animate] {
   opacity: 0;
   transform: translateY(30px);
@@ -4200,28 +4251,6 @@ header nav ul li a.active, header nav ul li a:hover {
     rotate: -2deg;
     border-radius: 10px;
   }
-}
-.why-card {
-  position: relative;
-}
-.dot::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 3px;
-  width: 3px;
-  border-radius: 50%;
-  background: red;
-  z-index: 6;
-}
-.clock.aus_clock {
-  background-color: #000;
-  border-color: #fff;
-}
-.clock.aus_clock .dot, .clock.aus_clock .hour-hand, .clock.aus_clock .minute-hand {
-  background: #fff;
 }
 @property --tw-translate-x {
   syntax: "*";
