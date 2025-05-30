@@ -6,12 +6,17 @@
         <title>Chameleon Infotech</title>
         <link href="./output.css" rel="stylesheet">
         <link rel="icon" type="image/x-icon" href="images/chameleonlogo.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Kalnia:wght@100..700&family=Lexend+Deca:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     </head>
-    <body class="font-sans overflow-x-hidden scroll-smooth">
+    <body class="font-primary overflow-x-hidden scroll-smooth">
 
-        <header class="sticky top-[20px] z-50 mb-[-100px]">
+        <header class="sticky top-[20px] z-50 mb-[-100px] sm:mx-3.5">
             <div class="container mx-auto px-[15px] lg:px-[0px]">
                 <div
                     class="flex justify-between items-center bg-secondary text-black max-h-[78px] mt-[20px] mx-auto rounded-full px-[28px] py-[10px]"
@@ -23,7 +28,7 @@
                                 class="max-w-[130px] md:max-w-[188px]"></a>
                     </div>
                     <div
-                        class="burgerMenu lg:hidden w-6 h-6 cursor-pointer bg-transparent duration-300 ease-in-out relative z-[51]"
+                        class="burgerMenu lg:hidden w-6 h-5 cursor-pointer bg-transparent duration-300 ease-in-out relative z-[51]"
                         id="burgerMenu">
                         <span
                             class="absolute block w-full h-[2px] bg-black rounded-[2px] duration-150 ease-in-out origin-[left-center] top-0"></span>
@@ -36,34 +41,40 @@
                         class="lg:block fixed lg:static h-screen lg:h-full bottom-0 top-0 right-0 w-full sm:w-1/2 bg-secondary bg-opacity-95 px-7 pt-20 z-50 lg:pt-0 lg:px-0 lg:bg-transparent lg:w-auto backdrop-blur-[10px] lg:backdrop-blur-0 hidden"
                         id="navMenu">
                         <ul
-                            class="flex flex-col h-full space-y-[28px] lg:space-y-0 lg:flex-row lg:items-center lg:space-x-[48px] uppercase text-[#000] font-medium text-base font-sans-semibold">
+                            class="flex flex-col h-full space-y-[28px] lg:space-y-0 lg:flex-row lg:items-center lg:space-x-[48px] uppercase text-[#000] font-medium text-base font-primary">
                             <li><a href="index.html"
-                                    class="hover:text-black duration-300 active font-sans-bold">Home</a></li>
+                                    class="hover:text-black duration-300 active font-primary font-bold active">Home</a></li>
                             <li><a href="about.html"
                                     class="hover:text-black duration-300">About</a></li>
                             <li><a href="services.html"
                                     class="hover:text-black duration-300">Services</a></li>
+                            <div class="block lg:hidden mt-4"
+                                id="getInTouchBtn">
+                                <a href="contact.html"
+                                    class="px-[26px] lg:px-[36px] py-[12px] lg:py-[18px] bg-primary text-secondary text-base lg:text-lg leading-[100%] rounded-full font-primary font-bold">Get
+                                    into touch</a>
+                            </div>
                         </ul>
                     </nav>
                     <div class="hidden lg:block" id="getInTouchBtn">
-                        <a href="#"
-                            class="px-[36px] py-[18px] bg-primary text-secondary text-lg leading-[100%] rounded-full font-sans-bold">Get
+                        <a href="contact.html"
+                            class="px-[36px] py-[18px] bg-primary text-secondary text-lg leading-[100%] rounded-full font-primary font-bold">Get
                             into touch</a>
                     </div>
                 </div>
             </div>
         </header>
-       
+
         <!-- banner section -->
         <section id="banner-section">
             <div
                 class="bg-[url(../src/images/banner-img.png)] bg-no-repeat bg-cover pt-[170px] relative">
                 <div class="container mx-auto px-[15px] lg:px-[0px]">
                     <div
-                        class="text-center pb-[70px] sm:pb-[114px] fade-text relative z-10">
+                        class="text-center  sm:pb-[114px] fade-text relative z-10">
                         <!-- Text with improved visibility -->
                         <p
-                            class="text-base sm:text-4xl text-black mb-[10px] sm:mb-[28px] font-sans font-medium block fade-in-text">
+                            class="text-base sm:text-4xl text-black mb-[10px] sm:mb-[28px] font-primary font-medium block fade-in-text">
                             Think Big & Be Creative
                         </p>
 
@@ -100,9 +111,10 @@
                                 class="animate-word absolute top-[90px] sm:top-[210px] lg:top-[260px] xl:top-[350px] left-[0px] sm:left-[40px] md:left-[130px] lg:left-[150px] xl:left-[170px] 2xl:left-[280px]   bg-secondary max-w-[233px] max-h-[140px] text-primary  px-[10px] py-[10px] lg:px-[18px] lg:py-[24px] backdrop-blur-box 
                                 rounded-tl-[15px] rounded-tr-[15px] rounded-br-[0px] rounded-bl-[15px] rotate-[-13deg]">
                                 <h4
-                                    class="text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[44px] font-sans-bold leading-[105%] counter" data-target="200" data-plus="true">0</h4>
+                                    class="text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[44px] font-primary leading-[105%] counter"
+                                    data-target="200" data-plus="true">0</h4>
                                 <p
-                                    class="text-[12px] sm:text-[14px] xl:text-[24px] font-sans-semibold">Happy
+                                    class="text-[12px] sm:text-[14px] xl:text-[24px] font-primary font-semibold ">Happy
                                     Clients</p>
                             </span>
                         </div>
@@ -174,11 +186,11 @@
             class="w-screen h-full overflow-hidden ">
             <div class="container mx-auto px-4 lg:px-0">
                 <div
-                    class="common-heading max-w-[800px] text-center mx-auto mb-[90px]">
-                    <h2
-                        class="text-[24px] sm:text-[28px] lg:text-[48px] text-[#0F0F0F] mb-[15px] font-sans-bold">
+                    class="common-heading max-w-[800px] text-center mx-auto mb-[40px] sm:mb-[90px]">
+                    <h3
+                        class="text-[24px] sm:text-[28px] lg:text-[48px] text-[#0F0F0F] mb-[15px] font-primary font-bold">
                         Empowering Businesses With Cutting-Edge IT Solutions
-                    </h2>
+                    </h3>
                     <p class="text-[16px] lg:text-[18px] leading-[26px]">We
                         Are
                         The Ideal Technology Partner For Providing
@@ -190,9 +202,9 @@
                         class="horizontal__item min-w-[100%] sm:min-w-[331px] lg:min-w-[360px] px-[28px] py-[44px] rounded-[25px] bg-[#F9F6FD]">
                         <div class="text-[#8D50ED]">
                             <span
-                                class="font-sans-bold inline-block bg-secondary px-[9px] py-[5px] rounded-[100px] mb-[28px]">01</span>
+                                class="font-primary font-bold inline-block bg-secondary px-[9px] py-[5px] rounded-[100px] mb-[28px]">01</span>
                             <h4
-                                class="text-[20px] sm:text-[24px] lg:text-[36px] Anton mb-[28px] max-w-[175px] lg:max-w-[210px]">Tailored
+                                class="text-[20px] sm:text-[24px] lg:text-[36px]  mb-[28px] max-w-[175px] lg:max-w-[210px]">Tailored
                                 IT Strategies for Your Business</h4>
                             <p class="text-base">We thoroughly analyze your
                                 business needs and craft customized IT
@@ -206,9 +218,9 @@
                         class="horizontal__item min-w-[100%] sm:min-w-[331px] lg:min-w-[360px] px-[28px] py-[44px] rounded-[25px] bg-[#FFF0FE]">
                         <div class="text-[#C929CC]">
                             <span
-                                class="font-sans-bold inline-block bg-secondary px-[9px] py-[5px] rounded-[100px] mb-[28px]">02</span>
+                                class="font-primary font-bold inline-block bg-secondary px-[9px] py-[5px] rounded-[100px] mb-[28px]">02</span>
                             <h4
-                                class="text-[20px] sm:text-[24px] lg:text-[36px] Anton mb-[28px] max-w-[175px] lg:max-w-[210px]">Tailored
+                                class="text-[20px] sm:text-[24px] lg:text-[36px]  mb-[28px] max-w-[175px] lg:max-w-[210px]">Tailored
                                 IT Strategies for Your Business</h4>
                             <p class="text-base">We thoroughly analyze your
                                 business needs and craft customized IT
@@ -222,9 +234,9 @@
                         class="horizontal__item min-w-[100%] sm:min-w-[331px] lg:min-w-[360px] px-[28px] py-[44px] rounded-[25px] bg-[#FFEFEE]">
                         <div class="text-[#F87979]">
                             <span
-                                class="font-sans-bold inline-block bg-secondary px-[9px] py-[5px] rounded-[100px] mb-[28px]">03</span>
+                                class="font-primary font-bold inline-block bg-secondary px-[9px] py-[5px] rounded-[100px] mb-[28px]">03</span>
                             <h4
-                                class="text-[20px] sm:text-[24px] lg:text-[36px] Anton mb-[28px] max-w-[175px] lg:max-w-[210px]">Tailored
+                                class="text-[20px] sm:text-[24px] lg:text-[36px]  mb-[28px] max-w-[175px] lg:max-w-[210px]">Tailored
                                 IT Strategies for Your Business</h4>
                             <p class="text-base">We thoroughly analyze your
                                 business needs and craft customized IT
@@ -238,9 +250,9 @@
                         class="horizontal__item min-w-[100%] sm:min-w-[331px] lg:min-w-[360px] px-[28px] py-[44px] rounded-[25px] bg-[#F1F9F7]">
                         <div class="text-[#22C59C]">
                             <span
-                                class="font-sans-bold inline-block bg-secondary px-[9px] py-[5px] rounded-[100px] mb-[28px]">04</span>
+                                class="font-primary font-bold inline-block bg-secondary px-[9px] py-[5px] rounded-[100px] mb-[28px]">04</span>
                             <h4
-                                class="text-[20px] sm:text-[24px] lg:text-[36px] Anton mb-[28px] max-w-[175px] lg:max-w-[210px]">Tailored
+                                class="text-[20px] sm:text-[24px] lg:text-[36px]  mb-[28px] max-w-[175px] lg:max-w-[210px]">Tailored
                                 IT Strategies for Your Business</h4>
                             <p class="text-base">We thoroughly analyze your
                                 business needs and craft customized IT
@@ -254,9 +266,9 @@
                         class="horizontal__item min-w-[100%] sm:min-w-[331px] lg:min-w-[360px] px-[28px] py-[44px] rounded-[25px] bg-[#ECF5FE]">
                         <div class="text-primary">
                             <span
-                                class="font-sans-bold inline-block bg-secondary px-[9px] py-[5px] rounded-[100px] mb-[28px]">05</span>
+                                class="font-primary font-bold inline-block bg-secondary px-[9px] py-[5px] rounded-[100px] mb-[28px]">05</span>
                             <h4
-                                class="text-[20px] sm:text-[24px] lg:text-[36px] Anton mb-[28px] max-w-[175px] lg:max-w-[210px]">Tailored
+                                class="text-[20px] sm:text-[24px] lg:text-[36px]  mb-[28px] max-w-[175px] lg:max-w-[210px]">Tailored
                                 IT Strategies for Your Business</h4>
                             <p class="text-base">We thoroughly analyze your
                                 business needs and craft customized IT
@@ -273,20 +285,20 @@
         <!-- card-slider-section end -->
 
         <!-- growth-section  -->
-        <section class="pb-[120px]">
+        <section class="pb-[60px] sm:pb-[120px]">
             <div class="container mx-auto px-[15px] lg:px-[0px]">
-                <div class="relative w-full px-6 mx-auto">
+                <div class="relative w-full px-3.5 sm:px-6 mx-auto">
                     <div
-                        class="background-text pt-[120px] absolute top-[50px] left-0 ">
+                        class="background-text pt-[60px] sm:pt-[120px] absolute top-[50px] left-0 ">
                         <!-- Background Text (Sticky) -->
-                        <h2
-                            class="font-sans-bold text-[26px] sm:text-[36px] lg:text-[48px] mb-[16px] max-w-[625px] lg:max-w-[700px] mx-auto text-center ">
+                        <h3
+                            class="font-primary font-bold text-[26px] sm:text-[36px] lg:text-[48px] mb-[16px] max-w-[625px] lg:max-w-[700px] mx-auto text-center ">
                             Innovative IT Services for Your Business Growth
-                        </h2>
+                        </h3>
                         <div
                             class="w-full text-center text-gray-200 opacity-30 select-none">
                             <div
-                                class="Anton text-[98px] sm:text-[180px] lg:text-[230px] font-bold leading-[1.2] w-[100%] md:w-[70%] mx-auto">ABOUT
+                                class="font-heading text-[98px] sm:text-[180px] lg:text-[230px] font-bold leading-[1.2] w-[100%] md:w-[70%] mx-auto">ABOUT
                                 SERVICE</div>
                         </div>
                     </div>
@@ -300,7 +312,7 @@
                                     class="text-[20px] sm:text-[24px] lg:text-[36px] Anton text-[#8D50ED]">Web
                                     Design</h2>
                                 <p
-                                    class="mt-[10px] sm:mt-[20px] lg:mt-[30px] font-sans-semibold text-[14px] lg:text-[16px]">We
+                                    class="mt-[10px] sm:mt-[20px] lg:mt-[30px] font-primary font-semibold text-[14px] lg:text-[16px]">We
                                     Build
                                     High-Performance ECommerce Websites For
                                     Retail, Fashion, Electronics, And More,
@@ -361,7 +373,7 @@
                                     class="text-[20px] sm:text-[24px] lg:text-[36px] Anton text-[#C929CC]">Web
                                     Developer</h2>
                                 <p
-                                    class=" mt-[10px] sm:mt-[20px] lg:mt-[30px] font-sans-semibold">We
+                                    class=" mt-[10px] sm:mt-[20px] lg:mt-[30px] font-primary font-semibold">We
                                     Build
                                     High-Performance ECommerce Websites For
                                     Retail, Fashion, Electronics, And More,
@@ -428,7 +440,7 @@
                                     class="text-[20px] sm:text-[24px] lg:text-[36px] Anton text-[#EDA623]">Mobile
                                     App Development</h2>
                                 <p
-                                    class="mt-[10px] sm:mt-[20px] lg:mt-[30px] font-sans-semibold">We
+                                    class="mt-[10px] sm:mt-[20px] lg:mt-[30px] font-primary font-semibold">We
                                     Build
                                     High-Performance ECommerce Websites For
                                     Retail, Fashion, Electronics, And More,
@@ -497,7 +509,7 @@
                                     class="text-[20px] sm:text-[24px] lg:text-[36px] Anton text-[#F87979]">UI
                                     / UX Designing</h2>
                                 <p
-                                    class="mt-[10px] sm:mt-[20px] lg:mt-[30px] font-sans-semibold">We
+                                    class="mt-[10px] sm:mt-[20px] lg:mt-[30px] font-primary font-semibold">We
                                     build
                                     high-performance eCommerce websites for
                                     retail, fashion, electronics, and more,
@@ -553,7 +565,7 @@
                                 <h2
                                     class="text-[20px] sm:text-[24px] lg:text-[36px] Anton text-[#22C59C]">E-commerce</h2>
                                 <p
-                                    class="mt-[10px] sm:mt-[20px] lg:mt-[30px] font-sans-semibold">We
+                                    class="mt-[10px] sm:mt-[20px] lg:mt-[30px] font-primary font-semibold">We
                                     build
                                     high-performance eCommerce websites for
                                     retail, fashion, electronics, and more,
@@ -602,7 +614,7 @@
                                     class="text-[20px] sm:text-[24px] lg:text-[36px] Anton text-primary">Content
                                     management system</h2>
                                 <p
-                                    class="mt-[10px] sm:mt-[20px] lg:mt-[30px] font-sans-semibold">We
+                                    class="mt-[10px] sm:mt-[20px] lg:mt-[30px] font-primary font-semibold">We
                                     build
                                     high-performance eCommerce websites for
                                     retail, fashion, electronics, and more,
@@ -659,15 +671,15 @@
         <!-- growth-section end -->
 
         <!-- Success Stories -->
-        <section class="pb-[150px]" id="projectsSection">
+        <section class="pb-[60px] sm:pb-[150px]" id="projectsSection">
             <div class="container mx-auto px-[15px] lg:px-[0px]">
-                <h2
-                    class="font-sans-bold text-[26px] sm:text-[36px] lg:text-[48px] mb-[16px] max-w-[625px] lg:max-w-[700px] mx-auto text-center">
+                <h3
+                    class="font-primary font-bold text-[26px] sm:text-[36px] lg:text-[48px] mb-[16px] max-w-[625px] lg:max-w-[700px] mx-auto text-center">
                     Innovative Projects & Success Stories
-                </h2>
+                </h3>
 
                 <div
-                    class="flex flex-col md:flex-row items-center sm:gap-10 mt-[60px]"
+                    class="flex flex-col md:flex-row items-center sm:gap-10 mt-[60px] px-3.5"
                     id="projectList">
                     <!-- Left Side: Project Items -->
                     <div class="w-full md:w-1/2 space-y-6">
@@ -684,7 +696,7 @@
                                     class="project-arrow max-w-[100%] opacity-0 ">
                             </div>
                             <p
-                                class="project-description lg:mt-[16px] font-sans-semibold text-[14px] lg:text-[16px] max-w-[491px] hidden">
+                                class="project-description lg:mt-[16px] font-primary font-semibold text-[14px] lg:text-[16px] max-w-[491px] hidden">
                                 Lorem Ipsum is simply dummy text of the printing
                                 and typesetting industry...
                             </p>
@@ -703,7 +715,7 @@
                                     class="project-arrow max-w-[100%] opacity-0">
                             </div>
                             <p
-                                class="project-description lg:mt-[16px] font-sans-semibold text-[14px] lg:text-[16px] max-w-[491px] hidden">
+                                class="project-description lg:mt-[16px] font-primary font-semibold text-[14px] lg:text-[16px] max-w-[491px] hidden">
                                 Lorem Ipsum is simply dummy text of the printing
                                 and typesetting industry...
                             </p>
@@ -722,7 +734,7 @@
                                     class="project-arrow max-w-[100%] opacity-0">
                             </div>
                             <p
-                                class="project-description lg:mt-[16px] font-sans-semibold text-[14px] lg:text-[16px] max-w-[491px] hidden">
+                                class="project-description lg:mt-[16px] font-primary font-semibold text-[14px] lg:text-[16px] max-w-[491px] hidden">
                                 Lorem Ipsum is simply dummy text of the printing
                                 and typesetting industry...
                             </p>
@@ -741,7 +753,7 @@
                                     class="project-arrow max-w-[100%] opacity-0">
                             </div>
                             <p
-                                class="project-description lg:mt-[16px] font-sans-semibold text-[14px] lg:text-[16px] max-w-[491px] hidden">
+                                class="project-description lg:mt-[16px] font-primary font-semibold text-[14px] lg:text-[16px] max-w-[491px] hidden">
                                 Lorem Ipsum is simply dummy text of the printing
                                 and typesetting industry...
                             </p>
@@ -757,10 +769,10 @@
                                 class="w-full rounded-lg" id="projectImg">
                         </div>
                         <div class="mt-[24px]">
-                            <h6 class="text-[18px] font-sans-bold"
+                            <h6 class="text-[18px] font-primary font-bold"
                                 id="projectTitle">Everprint</h6>
                             <ul
-                                class="font-sans-semibold text-[14px] flex flex-wrap gap-[20px] mt-[18px]"
+                                class="font-primary font-semibold text-[14px] flex flex-wrap gap-[20px] mt-[18px]"
                                 id="projectTags">
                                 <li><a href
                                         class="px-[16px] py-[4px] border-1 border-black rounded-full">Logo</a></li>
@@ -781,20 +793,20 @@
         <!-- Success Stories end -->
 
         <!-- feedback-section  -->
-        <section class="pb-[150px]">
+        <section class="pb-[60px] sm:pb-[150px]">
             <div class="container mx-auto px-[15px]">
                 <div
-                    class="max-w-[1075px] mx-auto pb-[150px] animate-text-wrapper relative">
-                    <h2
-                        class="animate-text text-center font-sans-bold text-[27px] sm:text-[37px] md:text-[46px] lg:text-[64px] text-primary leading-[46px] sm:leading-[55px] md:leading-[65px] lg:leading-[82px] relative overflow-hidden">
-                        <span class="block">Your Business Doesn't Fail Due
+                    class="max-w-[1075px] mx-auto pb-[50px] sm:pb-[150px] animate-text-wrapper relative">
+                    <h3
+                        class="animate-text text-center font-primary font-bold text-[27px] sm:text-[37px] md:text-[46px] lg:text-[64px] text-primary leading-normal sm:leading-[55px] md:leading-[65px] lg:leading-[82px] relative overflow-hidden">
+                        <span class>Your Business Doesn't Fail Due
                             to</span>
-                        <span class="block">Technology—It Fails Without
+                        <span class>Technology—It Fails Without
                             the</span>
-                        <span class="block">Right IT Strategy, Security,
+                        <span class>Right IT Strategy, Security,
                             and</span>
-                        <span class="block">Scalable Solutions.</span>
-                    </h2>
+                        <span class>Scalable Solutions.</span>
+                    </h3>
                 </div>
 
                 <div>
@@ -802,10 +814,10 @@
                         class="flex flex-col lg:flex-row justify-between gap-[20px] lg:gap-[100px] items-start">
                         <div
                             class="common-heading max-w-[390px] xl:max-w-[491px] sticky-section sticky top-36 z">
-                            <h2
-                                class="text-[24px] sm:text-[28px] lg:text-[36px] xl-[48px] text-[#0F0F0F] mb-[15px] font-sans-bold">
+                            <h3
+                                class="text-[24px] sm:text-[28px] lg:text-[36px] xl-[48px] text-[#0F0F0F] mb-[15px] font-primary font-bold">
                                 Honest Feedback From Valued People
-                            </h2>
+                            </h3>
                             <p
                                 class="text-[16px] lg:text-[18px] leading-[26px]">We
                                 Lorem Ipsum is simply dummy text of the printing
@@ -820,10 +832,10 @@
                                     <div
                                         class="text max-w-full lg:max-w-[450px] 2xl:max-w-[540px]">
                                         <span
-                                            class="py-1.5 px-5 bg-secondary rounded-full font-sans-bold text-[#8D50ED]">Redmal
+                                            class="py-1.5 px-5 bg-secondary rounded-full font-primary font-bold text-[#8D50ED]">Redmal
                                             CEO</span>
                                         <p
-                                            class="text-base font-sans-bold text-[#8D50ED] mt-5 lg:mt-12">Chameleon
+                                            class="text-base font-primary font-bold text-[#8D50ED] mt-5 lg:mt-12">Chameleon
                                             team contain great talents.
                                             Always ready for challenges and they
                                             do
@@ -851,10 +863,10 @@
                                     <div
                                         class="text max-w-full lg:max-w-[450px] 2xl:max-w-[540px]">
                                         <span
-                                            class="py-1.5 px-5 bg-secondary rounded-full font-sans-bold text-[#C929CC]">Redmal
+                                            class="py-1.5 px-5 bg-secondary rounded-full font-primary font-bold text-[#C929CC]">Redmal
                                             CEO</span>
                                         <p
-                                            class="text-base font-sans-bold text-[#C929CC] mt-5 lg:mt-12">Chameleon
+                                            class="text-base font-primary font-bold text-[#C929CC] mt-5 lg:mt-12">Chameleon
                                             team contain great talents.
                                             Always ready for challenges and they
                                             do
@@ -882,10 +894,10 @@
                                     <div
                                         class="text max-w-full lg:max-w-[450px] 2xl:max-w-[540px]">
                                         <span
-                                            class="py-1.5 px-5 bg-secondary rounded-full font-sans-bold text-[#EDA623]">Redmal
+                                            class="py-1.5 px-5 bg-secondary rounded-full font-primary font-bold text-[#EDA623]">Redmal
                                             CEO</span>
                                         <p
-                                            class="text-base font-sans-bold text-[#EDA623] mt-5 lg:mt-12">Chameleon
+                                            class="text-base font-primary font-bold text-[#EDA623] mt-5 lg:mt-12">Chameleon
                                             team contain great talents.
                                             Always ready for challenges and they
                                             do
@@ -915,17 +927,17 @@
         <!-- feedback-section end -->
 
         <!-- blog-section-start  -->
-        <section class="pb-[150px]">
+        <section class="pb-[60px] sm:pb-[150px]">
             <div class="container mx-auto px-[15px]">
-                <h2
-                    class="font-sans-bold text-[26px] sm:text-[36px] lg:text-[48px] mb-[16px] max-w-[209px] sm:max-w-[386px] mx-auto text-center">
+                <h3
+                    class="font-primary font-bold text-[26px] sm:text-[36px] lg:text-[48px] mb-[16px] max-w-[209px] sm:max-w-[386px] mx-auto text-center">
                     Tech Trends & IT Solutions Blog
-                </h2>
+                </h3>
 
-                <div class="flex mt-10 flex-wrap justify-center">
+                <div class="flex mt-10 flex-wrap justify-center gap-6">
                     <!-- Card 1 with hover text -->
                     <div
-                        class="max-w-[478px] text-base sm:text-lg group relative overflow-hidden rounded-[20px] p-[30px] cursor-pointer">
+                        class="max-w-[478px] text-base sm:text-lg group relative overflow-hidden rounded-[20px] p-[5px] sm:p-[30px] cursor-pointer">
                         <div class="image">
                             <img src="images/blog-image.png" alt
                                 class="w-full block rounded-[20px]">
@@ -952,12 +964,13 @@
                         <!-- Static content -->
                         <div class="flex justify-between mt-7">
                             <h6
-                                class="text-[#8D50ED] font-sans-bold">SHOPIFY</h6>
-                            <p class="font-sans-semibold">February 14, 2025</p>
+                                class="text-[#8D50ED] font-primary font-bold">SHOPIFY</h6>
+                            <p class="font-primary font-semibold">February 14,
+                                2025</p>
                         </div>
 
                         <div>
-                            <p class="font-sans-bold mt-[16px]">What is
+                            <p class="font-primary font-bold mt-[16px]">What is
                                 Dropshipping in Simple Terms? The Complete
                                 Beginner's Guide</p>
                         </div>
@@ -965,7 +978,7 @@
 
                     <!-- Card 2 (static) -->
                     <div
-                        class="max-w-[478px] text-lg group relative overflow-hidden rounded-[20px] p-[30px] cursor-pointer">
+                        class="max-w-[478px] text-base sm:text-lg group relative overflow-hidden rounded-[20px] p-[5px] sm:p-[30px] cursor-pointer">
                         <div class="image">
                             <img src="images/blog-image.png" alt
                                 class="w-full rounded-[20px]">
@@ -989,11 +1002,12 @@
                         </div>
                         <div class="flex justify-between mt-7">
                             <h6
-                                class="text-[#C929CC] font-sans-bold">SHOPIFY</h6>
-                            <p class="font-sans-semibold">February 14, 2025</p>
+                                class="text-[#C929CC] font-primary font-bold">SHOPIFY</h6>
+                            <p class="font-primary font-semibold">February 14,
+                                2025</p>
                         </div>
                         <div>
-                            <p class="font-sans-bold mt-[16px]">What is
+                            <p class="font-primary font-bold mt-[16px]">What is
                                 Dropshipping in Simple Terms? The Complete
                                 Beginner's Guide</p>
                         </div>
@@ -1001,7 +1015,7 @@
 
                     <!-- Card 3 (static) -->
                     <div
-                        class="max-w-[478px] text-lg group relative overflow-hidden rounded-[20px] p-[30px] cursor-pointer">
+                        class="max-w-[478px] text-base sm:text-lg group relative overflow-hidden rounded-[20px] p-[5px] sm:p-[30px] cursor-pointer">
                         <div class="image">
                             <img src="images/blog-image.png" alt
                                 class="w-full rounded-[20px]">
@@ -1025,11 +1039,12 @@
                         </div>
                         <div class="flex justify-between mt-7">
                             <h6
-                                class="text-[#EDA623] font-sans-bold">SHOPIFY</h6>
-                            <p class="font-sans-semibold">February 14, 2025</p>
+                                class="text-[#EDA623] font-primary font-bold">SHOPIFY</h6>
+                            <p class="font-primary font-semibold">February 14,
+                                2025</p>
                         </div>
                         <div>
-                            <p class="font-sans-bold mt-[16px]">What is
+                            <p class="font-primary font-bold mt-[16px]">What is
                                 Dropshipping in Simple Terms? The Complete
                                 Beginner's Guide</p>
                         </div>
@@ -1041,13 +1056,13 @@
         <!-- blog-section-end -->
 
         <!-- register-section -->
-        <section class="register py-[120px] bg-[#ECF5FE]">
+        <section class="register py-[60px] sm:py-[120px] bg-[#ECF5FE]">
             <div class="container mx-auto px-[15px] lg:px-[0px]">
                 <div
                     class="max-w-[625px] lg:max-w-[720px] mx-auto text-center">
-                    <h2
-                        class="font-sans-bold text-[26px] sm:text-[36px] lg:text-[48px] mb-[16px] ">Let’s
-                        Connect & Build Something Great Together!</h2>
+                    <h3
+                        class="font-primary font-bold text-[26px] sm:text-[36px] lg:text-[48px] mb-[16px] ">Let’s
+                        Connect & Build Something Great Together!</h3>
                     <p
                         class="text-[14px] sm:text-[16px] lg:text-[18px] mb-[20px] sm:mb-[36px]">Whether
                         you need IT
@@ -1068,7 +1083,7 @@
                                     class="w-full outline-none">
                             </div>
                             <input type="submit" value="Register"
-                                class="px-[48px] py-[10px] sm:py-[15px] lg:py-[20px] bg-primary rounded-full text-secondary DM-Sans-bold cursor-pointer max-w-[160px] mx-auto">
+                                class="px-[48px] py-[10px] sm:py-[15px] lg:py-[20px] bg-primary rounded-full text-secondary font-primary font-bold cursor-pointer max-w-[160px] mx-auto">
                         </div>
                     </form>
                 </div>
@@ -1076,7 +1091,7 @@
         </section>
         <!-- register-section end -->
 
-        <footer class="footer pt-[100px] pb-[40px] ">
+        <footer class="footer pt-[50px] sm:pt-[100px] pb-[40px] ">
             <div class="container mx-auto px-[15px] lg:px-[0px] ">
                 <div
                     class="flex-col text-center sm:text-left justify-center items-center sm:items-start sm:flex-row flex gap-[50px] lg:gap-[150px] ">
@@ -1093,8 +1108,8 @@
                             offers services globally.</p>
                     </div>
                     <div class="sm:max-w-[65px]">
-                        <h4
-                            class="text-[22px] mb-[28px] font-sans-bold">Page</h4>
+                        <h6
+                            class="text-[22px] mb-[28px] font-primary font-bold">Page</h6>
                         <ul>
                             <li class="mb-[18px]"><a href>Home</a></li>
                             <li class="mb-[18px]"><a href>About</a></li>
@@ -1104,8 +1119,8 @@
                         </ul>
                     </div>
                     <div class="max-w-[442px] sm:max-w-[262px]">
-                        <h4
-                            class="text-[22px] mb-[28px] font-sans-bold">Contact</h4>
+                        <h6
+                            class="text-[22px] mb-[28px] font-primary font-bold">Contact</h6>
                         <div
                             class="flex gap-[14px] mb-[18px] items-center justify-center sm:justify-start">
                             <img src="images/svg/Vector.svg" alt>
@@ -1142,7 +1157,6 @@
             </div>
         </footer>
 
-        <script src="js/jquery-3.6.0.min.js"></script>
         <script src="js/gsap.min.js"></script>
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/ScrollTrigger.min.js"></script>

@@ -44,21 +44,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-$(document).ready(function () {
-    $('.burgerMenu').click(function () {
-        const nav = $('#navMenu');
-        nav.toggleClass('hidden');
+document.addEventListener('DOMContentLoaded', function () {
+    const burgerMenu = document.querySelector('.burgerMenu');
+    const nav = document.getElementById('navMenu');
 
-        $(this).find('span').eq(0).toggleClass('rotate-45 translate-y-[8px]');
-        $(this).find('span').eq(1).toggleClass('opacity-0');
-        $(this).find('span').eq(2).toggleClass('rotate-135 translate-y-[-8px]');
+    burgerMenu.addEventListener('click', function () {
+        nav.classList.toggle('hidden');
+
+        const spans = this.querySelectorAll('span');
+        spans[0].classList.toggle('rotate-45');
+        spans[0].classList.toggle('translate-y-[8px]');
+        spans[1].classList.toggle('opacity-0');
+        spans[2].classList.toggle('rotate-135');
+        spans[2].classList.toggle('translate-y-[-8px]');
 
         // Animate when menu opens
-        if (!nav.hasClass('hidden')) {
+        if (!nav.classList.contains('hidden')) {
             animateResponsiveNavItems();
         }
     });
 });
+
 
 // banner-text
 document.addEventListener("DOMContentLoaded", function () {

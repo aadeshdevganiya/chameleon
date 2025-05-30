@@ -1,17 +1,36 @@
 // Register plugin
+
 gsap.registerPlugin(ScrollTrigger);
 
-// Animate the Hero Text (first section)
-gsap.from(".banner-subtitle", {
-    scrollTrigger: {
-        trigger: ".banner-subtitle",
-        start: "top 80%",
-        toggleActions: "play reverse play reverse",
-    },
-    opacity: 0,
-    y: 50,
-    duration: 1,
-    ease: "power3.out"
+document.addEventListener("DOMContentLoaded", () => {
+    const spans = document.querySelectorAll('.animate-text span');
+
+    const lastSpan = spans[spans.length - 1];
+    const lastSpanOffset = lastSpan.offsetTop;
+
+    spans.forEach((span) => {
+        const offsetY = lastSpanOffset - span.offsetTop;
+
+        gsap.set(span, {
+            opacity: 0,
+            y: offsetY
+        });
+    });
+
+    gsap.to(spans, {
+        opacity: 1,
+        y: 0,
+        stagger: 0.15,
+        duration: 1.4,
+        ease: "power3.out",
+        scrollTrigger: {
+            trigger: '.animate-text-wrapper',
+            start: 'top 80%',
+            end: 'bottom 15%',
+            scrub: 2,
+            markers: false
+        }
+    });
 });
 
 gsap.from(".why-card", {
@@ -47,3 +66,4 @@ gsap.utils.toArray(".feedback-card").forEach((card, index) => {
         },
     });
 });
+

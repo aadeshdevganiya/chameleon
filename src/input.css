@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 
-/* styles.css or globals.css */
+/* styles.css or globals.css
 @font-face {
   font-family: "DM-Sans";
   src: url(../src/font/DMSans-Regular.ttf);
@@ -20,35 +20,23 @@
 @font-face {
   font-family: "Anton";
   src: url(../src/font/Anton-Regular.ttf);
-}
-
-.font-sans {
-  font-family: "DM-Sans";
-}
-
-.font-sans-semibold {
-  font-family: "DM-Sans-semibold";
-}
-
-.font-sans-bold {
-  font-family: "DM-Sans-bold";
-}
-
-.Anton {
-  font-family: "Anton";
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "DM-Sans-bold";
-}
+} */
 
 @theme {
   --color-primary: #0176BD;
   --color-secondary: #fff;
   --color-black: #000;
-  --font-primary: "DM-Sans";
+  --font-primary: "DM Sans", sans-serif;
+  --font-heading: "Anton", sans-serif;
 }
 
+h1, h2, h4 {
+  @apply font-heading
+}
+
+header nav ul li a.active, header nav ul li a:hover {
+  @apply text-primary
+}
 
 /* style css */
 
