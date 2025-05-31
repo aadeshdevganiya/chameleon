@@ -272,6 +272,9 @@
   .top-5 {
     top: calc(var(--spacing) * 5);
   }
+  .top-20 {
+    top: calc(var(--spacing) * 20);
+  }
   .top-36 {
     top: calc(var(--spacing) * 36);
   }
@@ -4452,6 +4455,12 @@
   .xl\:text-\[160px\] {
     @media (width >= 80rem) {
       font-size: 160px;
+    }
+  }
+  .xl\:leading-\[53px\] {
+    @media (width >= 80rem) {
+      --tw-leading: 53px;
+      line-height: 53px;
     }
   }
   .xl\:leading-\[191px\] {
