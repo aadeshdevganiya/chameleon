@@ -290,22 +290,22 @@ const projectData = [
     {
         title: "Signaturia",
         image: "images/everprint.png",
-        features: ["Design", "Web App", "Signature Generator"]
+        features: ["React", "Node.js", "MongoDB","AWS"]
     },
     {
         title: "Ticket Booking",
         image: "images/ticket.png",
-        features: ["UI/UX", "Booking", "React"]
+        features: ["Laravel", "MySQL", "Razorpay","Bootstrap"]
     },
     {
         title: "Jewelry Design",
         image: "images/jewelry.png",
-        features: ["3D Renders", "Branding", "Luxury"]
+        features: ["Shopify Custom App", "Three.js", "Figma"]
     },
     {
         title: "Office Management",
         image: "images/office.png",
-        features: ["Dashboard", "HR Tools", "Productivity"]
+        features: ["Angular", "Firebase", "REST API" , "Google Auth"]
     }
 ];
 

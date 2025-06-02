@@ -43,7 +43,7 @@ gsap.to(horizontalSection, {
     start: 'top top',
     end: () => '+=' + (horizontalSection.scrollWidth - window.innerWidth),
     pin: true,
-    scrub: 1,
+    scrub: 1.5,
     anticipatePin: 1,
     invalidateOnRefresh: true,
     markers: false // turn on if you want to debug
