@@ -289,22 +289,22 @@ const projectTags = document.getElementById("projectTags");
 const projectData = [
     {
         title: "Signaturia",
-        image: "images/everprint.png",
+        image: "assets/images/everprint.png",
         features: ["React", "Node.js", "MongoDB","AWS"]
     },
     {
         title: "Ticket Booking",
-        image: "images/ticket.png",
+        image: "assets/images/everprint.png",
         features: ["Laravel", "MySQL", "Razorpay","Bootstrap"]
     },
     {
         title: "Jewelry Design",
-        image: "images/jewelry.png",
+        image: "assets/images/everprint.png",
         features: ["Shopify Custom App", "Three.js", "Figma"]
     },
     {
         title: "Office Management",
-        image: "images/office.png",
+        image: "assets/images/everprint.png",
         features: ["Angular", "Firebase", "REST API" , "Google Auth"]
     }
 ];

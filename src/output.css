@@ -830,9 +830,6 @@
   .w-\[50\%\] {
     width: 50%;
   }
-  .w-\[80vw\] {
-    width: 80vw;
-  }
   .w-\[90\%\] {
     width: 90%;
   }
@@ -844,9 +841,6 @@
   }
   .w-full {
     width: 100%;
-  }
-  .w-max {
-    width: max-content;
   }
   .w-screen {
     width: 100vw;
@@ -877,9 +871,6 @@
   }
   .max-w-\[160px\] {
     max-width: 160px;
-  }
-  .max-w-\[175px\] {
-    max-width: 175px;
   }
   .max-w-\[190px\] {
     max-width: 190px;
@@ -976,9 +967,6 @@
   }
   .shrink {
     flex-shrink: 1;
-  }
-  .shrink-0 {
-    flex-shrink: 0;
   }
   .flex-grow {
     flex-grow: 1;
@@ -1505,13 +1493,6 @@
       margin-inline-end: calc(calc(var(--spacing) * 1) * calc(1 - var(--tw-space-x-reverse)));
     }
   }
-  .space-x-6 {
-    :where(& > :not(:last-child)) {
-      --tw-space-x-reverse: 0;
-      margin-inline-start: calc(calc(var(--spacing) * 6) * var(--tw-space-x-reverse));
-      margin-inline-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-x-reverse)));
-    }
-  }
   .space-x-reverse {
     :where(& > :not(:last-child)) {
       --tw-space-x-reverse: 1;
@@ -1621,6 +1602,12 @@
   }
   .rounded-\[2px\] {
     border-radius: 2px;
+  }
+  .rounded-\[15px\] {
+    border-radius: 15px;
+  }
+  .rounded-\[18px\] {
+    border-radius: 18px;
   }
   .rounded-\[20px\] {
     border-radius: 20px;
@@ -2202,9 +2189,6 @@
   }
   .pt-\[90px\] {
     padding-top: 90px;
-  }
-  .pt-\[120px\] {
-    padding-top: 120px;
   }
   .pt-\[170px\] {
     padding-top: 170px;
@@ -3889,6 +3873,11 @@
       margin-inline-end: 30px;
     }
   }
+  .lg\:mt-5 {
+    @media (width >= 64rem) {
+      margin-top: calc(var(--spacing) * 5);
+    }
+  }
   .lg\:mt-12 {
     @media (width >= 64rem) {
       margin-top: calc(var(--spacing) * 12);
@@ -3944,11 +3933,6 @@
       max-width: 100%;
     }
   }
-  .lg\:max-w-\[210px\] {
-    @media (width >= 64rem) {
-      max-width: 210px;
-    }
-  }
   .lg\:max-w-\[276px\] {
     @media (width >= 64rem) {
       max-width: 276px;
@@ -3957,11 +3941,6 @@
   .lg\:max-w-\[390px\] {
     @media (width >= 64rem) {
       max-width: 390px;
-    }
-  }
-  .lg\:max-w-\[400px\] {
-    @media (width >= 64rem) {
-      max-width: 400px;
     }
   }
   .lg\:max-w-\[450px\] {
@@ -3982,16 +3961,6 @@
   .lg\:min-w-\[360px\] {
     @media (width >= 64rem) {
       min-width: 360px;
-    }
-  }
-  .lg\:min-w-\[400\] {
-    @media (width >= 64rem) {
-      min-width: 400;
-    }
-  }
-  .lg\:min-w-\[400px\] {
-    @media (width >= 64rem) {
-      min-width: 400px;
     }
   }
   .lg\:flex-row {
